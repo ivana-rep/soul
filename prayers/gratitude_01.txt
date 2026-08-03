@@ -1,7 +1,6 @@
 gratitude | You haven't abandoned me
 ↳ [back to index](index.html)
-↳ [back to bible verses archive](bible-verses-archive.html)
-↳ [back to prayers archive](prayers-archive.html)
+↳ [back to archive](archive.html)
 
 God, today has been a difficult day.
 perhaps i cried, perhaps i smiled on the outside whilst crumbling on the inside.
@@ -11,3 +10,5 @@ thank You.
 not for what i've understood,
 but what You've kept standing
 when i could no longer hold on
+
+~ ↳ see other prayers on the same topic > [gratitude](archive.html#gratitude-prayers)
