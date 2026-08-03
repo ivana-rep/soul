@@ -75,7 +75,7 @@ Everything else, including brand names (e.g. "telegram"), sentence-initial words
 Every bible verse is assigned exactly one topic (Claude proposes it, reusing an existing one when it fits).
 
 1. Add the new .txt file under bible/.
-2. **Author/book section**: if a `<span id="{book-slug}"></span>{Book}` section already exists, insert the new entry as the first `↳ {chapter}:{verse} <a>...</a>` line under it (newest first). If it's a new book, create the section (positioned in canonical biblical order, Genesis → Revelation) and add `<a href="#{book-slug}">{Book}</a>` to the `↳ author` index line, in the same canonical position.
+2. **Author/book section**: if a `<span id="{book-slug}"></span>{Book}` section already exists, insert the new entry in chapter:verse ascending order among the existing `↳ {chapter}:{verse} <a>...</a>` lines under it (biblical order within the book, not insertion date). If it's a new book, create the section (positioned in canonical biblical order, Genesis → Revelation) and add `<a href="#{book-slug}">{Book}</a>` to the `↳ author` index line, in the same canonical position.
 3. **Topic section**: if a `<span id="{topic-slug}"></span>{topic}` section already exists, insert the new entry as the first `↳ {Book} {chapter}:{verse} <a>...</a>` line under it (newest first — note the book name IS included here, since a topic section spans multiple books). If it's a new topic, create the section (positioned alphabetically among topic sections) and add `<a href="#{topic-slug}">{topic}</a>` to the `↳ topic` index line, alphabetically.
 4. Add the `~ ↳ see other verses on the same topic > [...]` line to the .txt file (see Formatting syntax above).
 
