@@ -71,12 +71,24 @@
           text-decoration-color: var(--mark-dark);
         }
       }
+
+      .counter {
+        color: #aaa;
+        font-size: 0.8em;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .counter {
+          color: #555;
+        }
+      }
     </style>
   </head>
 
   <body>
 <pre>
 <mark>soul</mark> | <a href="index.html">index</a> | <a href="prayers-archive.html">prayers archive</a>
+<span class="counter">↳ bible version: NLT</span>
 
 ↳ <a href="isaiah-archive.html">Isaiah</a>
 </pre>
