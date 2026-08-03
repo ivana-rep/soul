@@ -56,6 +56,8 @@ Every .txt file (bible or prayer) carries all three back-links, regardless of ty
 - `!!text!!` → highlight
 - `\ text` → blockquote line (each line of a quote gets its own `\ `)
 - `[text](url)` → link
+- `[N]` → verse-number marker, rendered as a small gray `.counter`-styled span (see bible verse format below)
+- `~ text` → counter-styled line (small gray, same look as `[N]` markers and the archive-page version/author notes); links inside are still rendered as links. Used for an optional source-attribution line at the very end of a file, e.g. `~ ↳ source: [name](url)`
 
 ## Lowercase style rule
 All text, everywhere (.txt content, HTML page text, titles, headings), is lowercase — including the initial letter of sentences and titles — EXCEPT:

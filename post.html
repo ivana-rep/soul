@@ -123,6 +123,16 @@
           continue;
         }
 
+        // source note: ~ text (counter-styled line, links still processed)
+        if (line.startsWith("~ ")) {
+          let src = escapeHTML(line.slice(2)).replace(
+            /\[([^\]]+)\]\(([^)]+)\)/g,
+            (m, text, link) => `<a href="${link}">${text}</a>`
+          );
+          out.push(`<span class="counter">${src}</span>`);
+          continue;
+        }
+
         // verse number: [N] anywhere in the line (multi-verse quotes)
         let processed = escapeHTML(line)
           .replace(/\[(\d+)\]\s?/g, '<span class="counter">$1</span> ');
