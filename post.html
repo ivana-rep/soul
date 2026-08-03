@@ -75,6 +75,17 @@
     .quote {
       color: var(--quote-fg);
     }
+
+    .counter {
+      color: #aaa;
+      font-size: 0.8em;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .counter {
+        color: #555;
+      }
+    }
   </style>
 </head>
 
@@ -112,9 +123,12 @@
           continue;
         }
 
-        // highlights
+        // verse number: [N] at start of line
         let processed = escapeHTML(line)
-          .replace(/!!(.*?)!!/g, "<mark>$1</mark>");
+          .replace(/^\[(\d+)\]\s?/, '<span class="counter">$1</span> ');
+
+        // highlights
+        processed = processed.replace(/!!(.*?)!!/g, "<mark>$1</mark>");
 
         // links
         processed = processed.replace(
