@@ -2,11 +2,12 @@
 
 ## Project structure
 ```
-index.html            ← homepage: title "soul" + links to about.txt, kind-archives.html, topics.html (nothing else)
-post.html              ← single-post viewer (loads .txt via ?p= param)
-kind-archives.html     ← bible verses archive, grouped by book, canonical biblical order (Genesis → Revelation)
-topics.html            ← prayers archive, grouped by topic, alphabetical order
-about.txt
+index.html                  ← homepage: title "soul" + description, links to bible-verses-archive.html and prayers-archive.html inline
+post.html                   ← single-post viewer (loads .txt via ?p= param)
+bible-verses-archive.html   ← list of bible books that have entries, links to each {book}-archive.html
+{book}-archive.html         ← one page per book, e.g. isaiah-archive.html, lists all entries for that book
+prayers-archive.html        ← list of prayer topics that have entries, links to each {topic}-archive.html
+{topic}-archive.html        ← one page per topic, e.g. gratitude-archive.html, lists all entries for that topic
 soulfavicon.png
 bible/
   {book}_{chapter}-{verse}.txt   e.g. isaiah_60-22.txt
@@ -14,57 +15,66 @@ prayers/
   {topic}_{NN}.txt               e.g. gratitude_01.txt
 ```
 
+There is no about.txt — its content lives directly in index.html.
+
 ## File formats
 
 ### Bible verse (bible/{book}_{chapter}-{verse}.txt)
-First line: `Book Chapter:Verse | Title` — e.g. `Isaiah 60:22 | At the right time`
+First line: `Book Chapter:Verse | title` — book name capitalized (proper name), title lowercase unless it contains a religious reference.
 ```
-Book Chapter:Verse | Title
+Book Chapter:Verse | title
 ↳ [back to index](index.html)
-↳ [back to kind archive](kind-archives.html)
-↳ [back to topics archive](topics.html)
+↳ [back to bible verses archive](bible-verses-archive.html)
+↳ [back to prayers archive](prayers-archive.html)
 
 Content.
 ```
 
 ### Prayer (prayers/{topic}_{NN}.txt)
-First line: `Topic | Title` — e.g. `Gratitude | You haven't abandoned me`
+First line: `topic | title` — topic lowercase (common noun, not a proper name).
 ```
-Topic | Title
+topic | title
 ↳ [back to index](index.html)
-↳ [back to kind archive](kind-archives.html)
-↳ [back to topics archive](topics.html)
+↳ [back to bible verses archive](bible-verses-archive.html)
+↳ [back to prayers archive](prayers-archive.html)
 
 Content.
 ```
 
-Every .txt file (bible or prayer) carries all three back-links, regardless of type.
+Every .txt file (bible or prayer) carries all three back-links, regardless of type. Links inside .txt files are resolved relative to post.html (which lives at the repo root), so never prefix them with `../` even though the .txt file itself lives in bible/ or prayers/.
 
 ## Formatting syntax (same engine as thoughtcapsules, no day counter)
 - `!!text!!` → highlight
 - `\ text` → blockquote line (each line of a quote gets its own `\ `)
 - `[text](url)` → link
 
-## Insertion rules
+## Lowercase style rule
+All text, everywhere (.txt content, HTML page text, titles, headings), is lowercase — including the initial letter of sentences and titles — EXCEPT:
+- words referring directly to God/religion: Lord, God, Him, His, Heaven, You/Your (when addressing God directly), and similar
+- proper names: book names (Isaiah, Genesis, Matthew...), people's names
 
-### kind-archives.html (bible)
-- Sections ordered canonically (Genesis → Revelation), one `<span id="{book-slug}"></span>` + `<mark>{Book}</mark>` heading per book that has at least one entry.
-- Top anchor nav bar lists only books currently present, in canonical order: `<a href="#{book-slug}">{Book}</a>`.
-- New entry: insert as the first `↳` line under its book's section (newest first).
-- New book (first entry for that book): add its anchor to the nav bar in canonical position, add a new section in canonical position.
+Everything else, including brand names (e.g. "telegram"), sentence-initial words, and the pronoun "I" (when referring to a human, not God), is lowercase.
 
-### topics.html (prayers)
-- Sections ordered alphabetically by topic, one `<span id="{topic-slug}"></span>` + `<mark>{Topic}</mark>` heading per topic that has at least one entry.
-- Top anchor nav bar lists only topics currently present, alphabetically: `<a href="#{topic-slug}">{Topic}</a>`.
-- New entry: insert as the first `↳` line under its topic's section (newest first).
-- New topic (first entry for that topic): add its anchor to the nav bar alphabetically, add a new section alphabetically.
+## Archive pages: adding a new book or topic
+Each archive works as a two-level structure: a master list page + one page per book/topic.
+
+### Bible
+1. Add the new .txt file under bible/.
+2. If the book already has a `{book}-archive.html` page: insert the new entry as the first `↳` line (newest first).
+3. If it's a new book: create `{book}-archive.html` (same template as isaiah-archive.html, with the two back-links to index.html and bible-verses-archive.html) and add a `↳ <a href="{book}-archive.html">{Book}</a>` line to bible-verses-archive.html, in canonical biblical order (Genesis → Revelation).
+
+### Prayers
+1. Add the new .txt file under prayers/.
+2. If the topic already has a `{topic}-archive.html` page: insert the new entry as the first `↳` line (newest first).
+3. If it's a new topic: create `{topic}-archive.html` (same template as gratitude-archive.html, with the two back-links to index.html and prayers-archive.html) and add a `↳ <a href="{topic}-archive.html">{topic}</a>` line to prayers-archive.html, in alphabetical order.
 
 ## Entry link format
-- Bible: `↳ {Chapter}:{Verse} <a href="post.html?p=bible/{file}.txt">{Title}</a>`
-- Prayers: `↳ <a href="post.html?p=prayers/{file}.txt">{Title}</a>`
+- Bible ({book}-archive.html): `↳ {chapter}:{verse} <a href="post.html?p=bible/{file}.txt">{title}</a>`
+- Prayers ({topic}-archive.html): `↳ <a href="post.html?p=prayers/{file}.txt">{title}</a>`
 
 ## Naming conventions
 - Bible files: lowercase book name + `_` + chapter-verse, e.g. `isaiah_60-22.txt`, `romans_8-28.txt`.
 - Prayer files: lowercase topic + `_` + two-digit sequence number (per topic), e.g. `gratitude_01.txt`, `gratitude_02.txt`, `entrusting_01.txt`.
 - Topic is always the first word of the prayer's first line (before ` | `).
 - Book is always the text before the chapter:verse in the bible verse's first line.
+- Archive page files: `{book-or-topic-slug}-archive.html`, all lowercase, e.g. `isaiah-archive.html`, `gratitude-archive.html`.
