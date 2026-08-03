@@ -123,9 +123,9 @@
           continue;
         }
 
-        // verse number: [N] at start of line
+        // verse number: [N] anywhere in the line (multi-verse quotes)
         let processed = escapeHTML(line)
-          .replace(/^\[(\d+)\]\s?/, '<span class="counter">$1</span> ');
+          .replace(/\[(\d+)\]\s?/g, '<span class="counter">$1</span> ');
 
         // highlights
         processed = processed.replace(/!!(.*?)!!/g, "<mark>$1</mark>");
