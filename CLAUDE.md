@@ -27,8 +27,17 @@ Book Chapter:Verse | title
 ↳ [back to bible verses archive](bible-verses-archive.html)
 ↳ [back to prayers archive](prayers-archive.html)
 
-Content.
+Verse text (NLT, verbatim in wording — but lowercase style rule below still applies to it).
+
+---
+
+Reflection.
 ```
+The verse text is the literal NLT translation — never paraphrased or shortened — but still gets the lowercase style rule applied (no exception for scripture). In longer verses, break the quote onto separate lines at natural clause/sentence boundaries rather than one continuous line.
+
+Mark every verse number with `[N]` — `post.html` renders this as a small gray `.counter`-styled span, matching the style used for the version/author notes on the archive pages. The first marker goes at the start of the text; if a quote spans multiple verses, later markers go wherever that verse begins in the NLT source, not necessarily at the start of a line (e.g. `[22] the smallest family...`).
+
+The `---` + reflection section is optional: if there's no reflection, the file ends right after the verse text — no separator, no extra section.
 
 ### Prayer (prayers/{topic}_{NN}.txt)
 First line: `topic | title` — topic lowercase (common noun, not a proper name).
