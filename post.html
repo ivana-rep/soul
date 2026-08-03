@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>soul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon.png">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --link: #005bff;
+      --mark-light: rgba(255, 241, 118, 0.9);
+      --mark-dark: rgba(255, 235, 59, 0.9);
+      --quote-fg: #555;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --fg: #ffffff;
+        --link: #8fc9ed;
+        --quote-fg: #bbb;
+      }
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      line-height: 1.35;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a, a:visited {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    mark {
+      background: none;
+      color: inherit;
+      padding: 0 2px;
+      background-image: linear-gradient(
+        transparent 62%,
+        var(--mark-light) 62%
+      );
+    }
+
+    @media (prefers-color-scheme: dark) {
+      mark {
+        background: none;
+        padding: 0;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.15em;
+        text-decoration-color: var(--mark-dark);
+      }
+    }
+
+    .quote {
+      color: var(--quote-fg);
+    }
+  </style>
+</head>
+
+<body>
+
+<pre id="content">Loading…</pre>
+
+<script>
+(function () {
+  const content = document.getElementById("content");
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get("p");
+
+  if (!file) {
+    content.textContent = "Missing file parameter.";
+    return;
+  }
+
+  fetch(file)
+    .then(r => {
+      if (!r.ok) throw new Error();
+      return r.text();
+    })
+    .then(text => {
+      const lines = text.split("\n"); // DO NOT trim
+      const out = [];
+
+      for (let line of lines) {
+
+        // blockquote: \ text
+        if (line.startsWith("\\ ")) {
+          out.push(
+            `<span class="quote">|- ${escapeHTML(line.slice(2))}</span>`
+          );
+          continue;
+        }
+
+        // highlights
+        let processed = escapeHTML(line)
+          .replace(/!!(.*?)!!/g, "<mark>$1</mark>");
+
+        // links
+        processed = processed.replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          (m, text, link) => {
+            return `<a href="${link}">${text}</a>`;
+          }
+        );
+
+        out.push(processed);
+      }
+
+      content.innerHTML = out.join("\n"); // PRESERVE EMPTY LINES
+    })
+    .catch(() => {
+      content.textContent = "Error loading file.";
+    });
+
+  function escapeHTML(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+})();
+</script>
+
+</body>
+</html>
