@@ -23,3 +23,5 @@ c. AD 405 | St. Jerome's Vulgate renders Joseph's response to Mary's pregnancy w
 
 ↳ connections
 ↳ verse: [Romans 12:19 — never take revenge](post.html?p=bible/romans_12-19.txt)
+↳ thought capsule | [2026-04-21](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260421.txt) | Recognition
+↳ thought capsule | [2026-04-18](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260418.txt) | The gap
