@@ -1,0 +1,37 @@
+saint | Augustine of Hippo
+↳ [back to index](index.html)
+↳ [back to archive](archive.html)
+↳ [back to saints](saints.html)
+
+↳ bio
+feast day: August 28
+354 | born in Tagaste (modern-day Algeria) to Patricius, a pagan father, and Monica, a christian mother later canonized herself
+371 | fathers His son Adeodato while studying rhetoric in Carthage, during years He later calls dissolute
+373 | joins the Manichaeans, drawn to their cosmic dualism of good and evil — stays with them for nine years
+384 | moves to Milan; hearing Bishop Ambrose preach and reading the Neoplatonists triggers His conversion crisis
+386 | hears a child's voice in a garden say "tolle, lege" ("take up and read"); opens Paul's letters at random — the turning point
+387 | baptized by Ambrose on Easter night
+388 | writes On Free Will (finished 395) — on freedom, evil, and responsibility
+391 | ordained a priest at Hippo
+396 | becomes Bishop of Hippo, a role He holds until His death; over the years combats three major heresies — Manichaeism, Donatism, and Pelagianism
+397 | begins writing the Confessions (finished 401) — the first great work of western introspective autobiography
+400 | writes On the Trinity (finished 416), His Trinitarian theology
+413 | begins writing City of God (finished 426), His philosophy of history contrasting the earthly and heavenly cities
+430 | dies on August 28 in Hippo while the Vandals besiege the city — later declared a Doctor of the Church
+
+↳ quotes
+\ You have made us for Yourself, O Lord, and our heart is restless until it rests in You.
+~ — Confessions
+
+\ do not go outward; return within yourself. in the inner man dwells truth.
+~ — On True Religion
+
+↳ what resonates with me
+* as Saint [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt), Augustine is contemporary and if we read into Him carefully we can find important teachings to navigate our modern life.
+* the Confessions open with one of the densest sentences in western philosophy: "You have made us for Yourself, and our heart is restless until it rests in You." Augustine doesn't describe His own restlessness as a spiritual failure, He reads it as the ontological structure of the human heart. desire never saturates: every joy fades just enough to generate another. !!sixteen centuries later the same mechanism drives infinite scroll, endless search, the quiet hunger for something that "is finally enough." the modern world has replaced Augustine's prayer with a search bar, same destination (something to quiet the restlessness), different direction: outward instead of inward.!! restlessness doesn't prove shallowness — it proves depth. [Isaiah 60:22](post.html?p=bible/isaiah_60-22.txt) ("I will hasten it in its time") shares the same structure of waiting: a heart that finds no rest in finite things, awaiting a fulfillment it cannot bring about itself.
+* on time: the past no longer exists, the future doesn't exist yet, and the present vanishes the instant you notice it. Augustine's answer is that time is something the mind creates — past as memory, present as attention, future as expectation. !!He collapses the whole concept of time into subjective consciousness, sixteen centuries before Husserl and Bergson, anticipating the contemporary discussion of the eternal present!!. Edmund Husserl would later describe how consciousness stretches every present moment through retention of what just happened and anticipation of what's coming; Henri Bergson would argue that lived time is a continuous flow (duration), not the discrete ticking of a clock — both, like Augustine, locate time inside experience rather than outside it. the "eternal present" is the modern name for this same idea: that all we ever really have is now, and past and future exist only as forms the mind gives to it. memory, in turn, is not an archive but an immense palace where everything you've lived or become is still alive; Augustine admits He can walk through parts of His own memory He doesn't recognize — describing the unconscious 1500 years before Freud.
+* [Seneca's Letter 61](https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_61) ("it seems and will always seem that something is missing") and Augustine's cor inquietum diagnose the same anthropological structure — desire that never saturates — but prescribe opposite remedies. Seneca: stop wanting what you've always wanted, accept death as a limit, find tranquility through philosophy. Augustine: desire doesn't saturate in finite things because we are made for God — peace comes only in resting in Him. both are systems for treating restlessness: one heals by unlearning desire, the other by directing desire to its true object.
+* His broader legacy: He is the first great western thinker to make subjective experience the starting point of philosophy ("in interiore homine habitat veritas"). where Plato and Aristotle centered reason, Augustine put the will (voluntas) at the decisive center of the human soul. His doctrine of grace and original sin became the foundation of western catholic theology and fueled centuries of debate (Jansenism, the Protestant Reformation) — the same logic of grace runs through the Beatitudes, where God doesn't distribute according to merit. and by reconciling Plato and Plotinus with Christianity, He became the bridge that carried classical philosophy into the medieval world.
+
+↳ connections
+↳ verse: [Isaiah 60:22 — at the right time](post.html?p=bible/isaiah_60-22.txt)
