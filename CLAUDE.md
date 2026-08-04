@@ -14,6 +14,9 @@ prayers/
   {title-slug}.txt               e.g. you-are-all-i-need.txt
 what-is-it/
   {book-slug}.txt                 e.g. isaiah.txt — short explainer of a Bible book, one per book cited in archive.html
+saints.html                 ← single page listing every saint, each behind its own anchor id, linking to their individual page
+saints/
+  {name-slug}.txt              e.g. francis-of-assisi.txt
 ```
 
 There is no about.txt — its content lives directly in index.html.
@@ -77,7 +80,39 @@ A few lines explaining what the book is: author/attribution, genre, Old/New Test
 ```
 One file per book that has at least one verse cited in `archive.html`. Not part of either "read another one" loop.
 
-Every .txt file (bible, prayer, or book explainer) carries both back-links (index, archive), regardless of type. Links inside .txt files are resolved relative to post.html (which lives at the repo root), so never prefix them with `../` even though the .txt file itself lives in bible/ or prayers/.
+### Saint bio (saints/{name-slug}.txt)
+First line: `saint | Name` — Name is the saint's canonical English name, capitalized (proper name), e.g. `Francis of Assisi`.
+```
+saint | Name
+↳ [back to index](index.html)
+↳ [back to archive](archive.html)
+↳ [back to saints](saints.html)
+
+↳ bio
+feast day: Month Day
+YYYY | fact
+YYYY | fact
+
+↳ quotes
+\ quote text
+~ — attribution
+
+↳ what resonates with me
+* point
+* point
+
+↳ connections
+↳ verse: [Book Chapter:Verse — title](post.html?p=bible/file.txt)
+↳ prayer: [title](post.html?p=prayers/file.txt)
+↳ thought capsule | [YYYY-MM-DD](url) | title
+```
+Every section is headed by `↳ section name` (lowercase), with one blank line between sections and no blank line inside a section. The `bio` timeline is chronological (birth → death/canonization), not newest-first — the only place on the site where entries aren't newest-first. Quotes use the `\ ` blockquote syntax (one line per line of the quote) followed by a `~ — attribution` counter-styled line (no `↳`, since it isn't a cross-reference). `what resonates with me` uses literal `* ` bullets (same convention as thoughtcapsules), one per line, no blank lines between. `connections` links relevant verses/prayers already in the archive — chosen for genuine resonance, never forced, may be omitted entirely if nothing genuinely fits — followed by any thought capsule links already curated in the saint's Obsidian note, carried over verbatim but reordered newest-to-oldest, with the date (not the title) as the hyperlink.
+
+Source content comes from Obsidian, `faith/saints/{name}.md`. If the file doesn't exist yet for a saint the user wants added, remind them to run the `saint-bio` skill first — never draft the bio content from scratch.
+
+This is a separate content type, like the book explainer: no reflection-vs-verse distinction, no source line, no topic cross-link, no "read another one" loop.
+
+Every .txt file (bible, prayer, book explainer, or saint bio) carries both back-links (index, archive), regardless of type. Links inside .txt files are resolved relative to post.html (which lives at the repo root), so never prefix them with `../` even though the .txt file itself lives in bible/ or prayers/.
 
 ## Formatting syntax (same engine as thoughtcapsules, no day counter)
 - `!!text!!` → highlight
@@ -93,9 +128,10 @@ Every .txt file (bible, prayer, or book explainer) carries both back-links (inde
 ## Lowercase style rule
 All text, everywhere (.txt content, HTML page text, titles, headings), is lowercase — including the initial letter of sentences and titles — EXCEPT:
 - words referring directly to God/religion: Lord, God, Him, His, Heaven, You/Your (when addressing God directly), and similar
+- words referring to a saint: He, Him, His, and similar — same exception as God-references, anywhere on the site a saint is discussed (not only on their own page)
 - proper names: book names (Isaiah, Genesis, Matthew...), people's names
 
-Everything else, including brand names (e.g. "telegram"), sentence-initial words, and the pronoun "I" (when referring to a human, not God), is lowercase.
+Everything else, including brand names (e.g. "telegram"), sentence-initial words, and the pronoun "I" (when referring to a human, not God or a saint speaking of themself), is lowercase.
 
 ## Archive pages: adding a new book, topic, or prayer
 
@@ -114,6 +150,14 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 2. **Topic section**: same logic as verses above, but for the `– prayers` sub-section (which comes after `verses` when both exist, no blank line between).
 3. Insert the new entry as the first line of `all-prayers-archive.html` (newest first): `↳ <a href="post.html?p=prayers/{file}.txt">{title}</a> | <a href="archive.html#{topic-slug}-prayers">{topic}</a>`.
 4. Add the `~ ↳ see other prayers on the same topic > [...]` and `> read [another](...) one` lines to the .txt file.
+5. Check `saints.html` for a genuinely relevant saint — if the new prayer's theme resonates with one, add a `↳ prayer: [title](post.html?p=prayers/{file}.txt)` line to that saint's `connections` section. Never force it.
+
+### Saints
+1. Before creating anything, check `faith/saints/{name}.md` exists in Obsidian. If it doesn't, tell the user to run the `saint-bio` skill first — don't draft the bio yourself.
+2. Add the new .txt file under saints/ (see "Saint bio" file format above), pulling bio/quotes/what-resonates content from the Obsidian note and thought-capsule connections from its `↳ connections` section (reordered newest-to-oldest, date as the link).
+3. Add an entry to `saints.html`, alphabetical by name: `<span id="{slug}"></span>↳ <a href="post.html?p=saints/{file}.txt">{Name}</a>`.
+4. Add to `archive.html`, right after the `↳ <a href="all-prayers-archive.html">all prayers</a>` line: `↳ <a href="saints.html#{slug}">{Name}</a>`, alphabetical by name. The generic `↳ <a href="saints.html">saints</a>` link above it is only added once, when the saints section is first introduced — not per saint.
+5. `index.html` only needs updating once, when the saints section is first introduced.
 
 ## The "read another one" loop
 
@@ -148,6 +192,7 @@ When adding a new entry, it's inserted at the top of the relevant flat list (mak
 - Bible files: lowercase book name + `_` + chapter-verse, e.g. `isaiah_60-22.txt`, `romans_8-28.txt`.
 - Book explainer files: `what-is-it/{book-slug}.txt`, same book-slug as the bible verse files, e.g. `what-is-it/isaiah.txt`.
 - Prayer files: lowercase title, spaces→`-`, punctuation stripped, e.g. `you-are-all-i-need.txt`. A numeric suffix (`-2`, etc.) is only a rare fallback for a genuine title collision, never the default.
+- Saint files: canonical English name, lowercase, spaces→`-`, e.g. `francis-of-assisi.txt`.
 - Topic is always the first word of the prayer's first line (before ` | `).
 - Book is always the text before the chapter:verse in the bible verse's first line.
 - Slugs (topic, book) are the lowercased name with spaces and `&` replaced by `-` (e.g. `rest-stillness`).
