@@ -40,13 +40,15 @@ Reflection.
 
 ~ ↳ see other verses on the same topic > [topic](archive.html#topic-slug-verses)
 
+~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)
+
 > read [another](post.html?p=bible/next-file.txt) one
 ```
 The verse text is the literal NLT translation — never paraphrased or shortened — but still gets the lowercase style rule applied (no exception for scripture). In longer verses, break the quote onto separate lines at natural clause/sentence boundaries rather than one continuous line.
 
 Mark every verse number with `[N]` — `post.html` renders this as a small gray `.counter`-styled span. The first marker goes at the start of the text; if a quote spans multiple verses, later markers go wherever that verse begins in the NLT source, not necessarily at the start of a line (e.g. `[22] the smallest family...`).
 
-The `---` + reflection section is optional: if there's no reflection, no separator, no extra section. The source line is optional. The topic cross-link line is mandatory. The `read another one` line is mandatory and always the very last line of the file.
+The `---` + reflection section is optional: if there's no reflection, no separator, no extra section. The source line is optional. The topic cross-link line is mandatory. The saint-connection line is optional — only when a saint's page genuinely links to this verse (see "Saints" workflow below) — and mirrors that link back; one line per saint if more than one connects. The `read another one` line is mandatory and always the very last line of the file.
 
 ### Prayer (prayers/{title-slug}.txt)
 First line: `topic | title` — topic lowercase (common noun, not a proper name).
@@ -65,9 +67,11 @@ Reflection.
 
 ~ ↳ see other prayers on the same topic > [topic](archive.html#topic-slug-prayers)
 
+~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)
+
 > read [another](post.html?p=prayers/next-file.txt) one
 ```
-Same optionality as bible verses (reflection and source optional, topic cross-link and `read another one` mandatory and last).
+Same optionality as bible verses (reflection and source optional, topic cross-link and `read another one` mandatory and last; saint-connection line optional, same rule as bible verses above).
 
 ### Book explainer (what-is-it/{book-slug}.txt)
 First line: `Book | what is it` — book capitalized (proper name), `what is it` is always fixed, lowercase, never changes.
@@ -106,9 +110,9 @@ YYYY | fact
 ↳ prayer: [title](post.html?p=prayers/file.txt)
 ↳ thought capsule | [YYYY-MM-DD](url) | title
 ```
-Every section is headed by `↳ section name` (lowercase), with one blank line between sections and no blank line inside a section. The `bio` timeline is chronological (birth → death/canonization), not newest-first — the only place on the site where entries aren't newest-first. Quotes use the `\ ` blockquote syntax (one line per line of the quote) followed by a `~ — attribution` counter-styled line (no `↳`, since it isn't a cross-reference). `what resonates with me` uses literal `* ` bullets (same convention as thoughtcapsules), one per line, no blank lines between. `connections` links relevant verses/prayers already in the archive — chosen for genuine resonance, never forced, may be omitted entirely if nothing genuinely fits — followed by any thought capsule links already curated in the saint's Obsidian note, carried over verbatim but reordered newest-to-oldest, with the date (not the title) as the hyperlink.
+Every section is headed by `↳ section name` (lowercase), with one blank line between sections and no blank line inside a section. The `bio` timeline is chronological (birth → death/canonization), not newest-first — the only place on the site where entries aren't newest-first. Quotes use the `\ ` blockquote syntax (one line per line of the quote) followed by a `~ — attribution` counter-styled line (no `↳`, since it isn't a cross-reference). `what resonates with me` uses literal `* ` bullets (same convention as thoughtcapsules), one per line, no blank lines between. `connections` links relevant verses/prayers already in the archive — chosen for genuine resonance, never forced, may be omitted entirely if nothing genuinely fits — followed by any thought capsule links already curated in the saint's Obsidian note, carried over verbatim but reordered newest-to-oldest, with the date (not the title) as the hyperlink. Every verse/prayer connection is bidirectional: the linked bible/prayer file gets a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line of its own (see the bible/prayer Formatting syntax above) — never link only from the saint's side.
 
-Saint cross-linking: anywhere in a saint's file — bio, quotes, what resonates with me, connections — another saint's name appears, it's linked to that saint's page if one already exists: `[Name](post.html?p=saints/{slug}.txt)`. This runs both directions when a new saint is added — see "Saints" workflow step 6 below.
+Saint cross-linking: anywhere in a saint's file — bio, quotes, what resonates with me, connections — another saint's name appears, it's linked to that saint's page if one already exists: `[Name](post.html?p=saints/{slug}.txt)`. This runs both directions when a new saint is added — see "Saints" workflow step 7 below.
 
 Source content comes from Obsidian, `faith/saints/{name}.md`. If the file doesn't exist yet for a saint the user wants added, remind them to run the `saint-bio` skill first — never draft the bio content from scratch.
 
@@ -123,7 +127,8 @@ Every .txt file (bible, prayer, book explainer, or saint bio) carries both back-
 - `[N]` → verse-number marker, rendered as a small gray `.counter`-styled span (see bible verse format above)
 - `~ text` → counter-styled line (small gray, same look as `[N]` markers and the archive-page notes); links inside are still rendered as links. Uses:
   - optional source-attribution line: `~ ↳ source: [name](url)` — the name follows the lowercase rule too, even if it's a person's name (the proper-name exception does not apply here, unlike bible book names)
-  - mandatory topic cross-link as the second-to-last line of the file: `~ ↳ see other verses on the same topic > [topic name](archive.html#topic-slug-verses)` (verses) or `~ ↳ see other prayers on the same topic > [topic name](archive.html#topic-slug-prayers)` (prayers) — points to the `verses`/`prayers` sub-section of that topic, not the whole section
+  - mandatory topic cross-link, placed after the reflection/source and before any saint-connection line: `~ ↳ see other verses on the same topic > [topic name](archive.html#topic-slug-verses)` (verses) or `~ ↳ see other prayers on the same topic > [topic name](archive.html#topic-slug-prayers)` (prayers) — points to the `verses`/`prayers` sub-section of that topic, not the whole section
+  - optional saint-connection line, one per connected saint, placed after the topic cross-link and before `read another one`: `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` — added whenever a saint's `connections` section genuinely links to this verse/prayer; keeps the link bidirectional. See "Saints" workflow below.
   - on a consolidated topic's principal verse only: one `~ ↳ says the exact same thing > [title](post.html?p=bible/file.txt)` line per secondary verse — see "Same-topic consolidation" below
 - `> read [another](url) one` → not part of the counter-styled engine, a plain line/link. Mandatory, always the last line of every .txt file. Forms a closed loop through ALL verses (via the ordering tracked in `all-verses-archive.html`) and, separately, a closed loop through ALL prayers (via `all-prayers-archive.html`) — see "The read another one loop" below.
 
@@ -146,21 +151,23 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 2. **Author/book section**: if a `<span id="{book-slug}"></span>{Book}` section already exists, insert the new entry in chapter:verse ascending order among the existing `↳ {chapter}:{verse} <a>...</a>` lines under it (biblical order within the book, not insertion date). If it's a new book, create the section (positioned in canonical biblical order, Genesis → Revelation) and add `<a href="#{book-slug}">{Book}</a>` to the `↳ author / book` index line, in the same canonical position. A new book also needs a `what-is-it/{book-slug}.txt` explainer file (see "Book explainer" above) and its section header becomes `<span id="{book-slug}"></span>{Book}<span class="counter"> / <a href="post.html?p=what-is-it/{book-slug}.txt">what is it</a></span>`.
 3. **Topic section**: within a topic block, the `verses` sub-section always comes before `prayers` when both exist, with no blank line between them. If a `<span id="{topic-slug}-verses"></span>– verses` sub-section already exists, insert the new entry as the first `↳ {Book} {chapter}:{verse} <a>...</a>` line under it (newest first — note the book name IS included here, since a topic section spans multiple books). If the topic exists but has no `verses` sub-section yet, create it right before any existing `prayers` sub-section. If it's a new topic, create the section (positioned alphabetically among topic sections) and add `<a href="#{topic-slug}">{topic}</a>` to the `↳ topic` index line, alphabetically.
 4. Add the `~ ↳ see other verses on the same topic > [...]` and `> read [another](...) one` lines to the .txt file (see Formatting syntax above, and "The read another one loop" below).
+5. Check `saints.html` for a genuinely relevant saint — if the new verse's theme resonates with one, add a `↳ verse: [Book Chapter:Verse — title](post.html?p=bible/{file}.txt)` line to that saint's `connections` section, AND add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to the verse's own .txt file (before `read another one`). Never force it — both sides of the link are added together, or neither.
 
 ### Prayers
 1. Add the new .txt file under prayers/, named `{title-slug}.txt` — never `{topic}_{NN}.txt`. Verify the title slug doesn't collide with any existing prayer filename (uniqueness is checked across ALL prayers, not per topic).
 2. **Topic section**: same logic as verses above, but for the `– prayers` sub-section (which comes after `verses` when both exist, no blank line between).
 3. Insert the new entry as the first line of `all-prayers-archive.html` (newest first): `↳ <a href="post.html?p=prayers/{file}.txt">{title}</a> | <a href="archive.html#{topic-slug}-prayers">{topic}</a>`.
 4. Add the `~ ↳ see other prayers on the same topic > [...]` and `> read [another](...) one` lines to the .txt file.
-5. Check `saints.html` for a genuinely relevant saint — if the new prayer's theme resonates with one, add a `↳ prayer: [title](post.html?p=prayers/{file}.txt)` line to that saint's `connections` section. Never force it.
+5. Check `saints.html` for a genuinely relevant saint — if the new prayer's theme resonates with one, add a `↳ prayer: [title](post.html?p=prayers/{file}.txt)` line to that saint's `connections` section, AND add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to the prayer's own .txt file (before `read another one`). Never force it — both sides of the link are added together, or neither.
 
 ### Saints
 1. Before creating anything, check `faith/saints/{name}.md` exists in Obsidian. If it doesn't, tell the user to run the `saint-bio` skill first — don't draft the bio yourself.
 2. Add the new .txt file under saints/ (see "Saint bio" file format above), pulling bio/quotes/what-resonates content from the Obsidian note and thought-capsule connections from its `↳ connections` section (reordered newest-to-oldest, date as the link).
-3. Add an entry to `saints.html`, alphabetical by name: `<span id="{slug}"></span>↳ <a href="post.html?p=saints/{file}.txt">{Name}</a>`.
-4. `archive.html` doesn't get a per-saint entry — only the generic `↳ <a href="saints.html">saints</a>` link, right after the `↳ <a href="all-prayers-archive.html">all prayers</a>` line, added once when the saints section is first introduced.
-5. `index.html` only needs updating once, when the saints section is first introduced.
-6. Cross-link with other saints: search all existing `saints/*.txt` files for mentions of the new saint's name and link them retroactively to the new page, `[Name](post.html?p=saints/{slug}.txt)`. Also check the new saint's own text (bio, quotes, what resonates, connections) for mentions of any existing saint and link those there too.
+3. Check `archive.html` (or browse `bible/` and `prayers/`) for verses/prayers that genuinely resonate with this saint's life/words/what-resonates — add `↳ verse: [...]`/`↳ prayer: [...]` lines to the new saint's `connections` section. Never force it. For each one added, also add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to that verse/prayer's own .txt file, before its `read another one` line — the link always goes both ways.
+4. Add an entry to `saints.html`, alphabetical by name: `<span id="{slug}"></span>↳ <a href="post.html?p=saints/{file}.txt">{Name}</a>`.
+5. `archive.html` doesn't get a per-saint entry — only the generic `↳ <a href="saints.html">saints</a>` link, right after the `↳ <a href="all-prayers-archive.html">all prayers</a>` line, added once when the saints section is first introduced.
+6. `index.html` only needs updating once, when the saints section is first introduced.
+7. Cross-link with other saints: search all existing `saints/*.txt` files for mentions of the new saint's name and link them retroactively to the new page, `[Name](post.html?p=saints/{slug}.txt)`. Also check the new saint's own text (bio, quotes, what resonates, connections) for mentions of any existing saint and link those there too.
 
 ## The "read another one" loop
 
