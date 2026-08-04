@@ -108,6 +108,8 @@ YYYY | fact
 ```
 Every section is headed by `↳ section name` (lowercase), with one blank line between sections and no blank line inside a section. The `bio` timeline is chronological (birth → death/canonization), not newest-first — the only place on the site where entries aren't newest-first. Quotes use the `\ ` blockquote syntax (one line per line of the quote) followed by a `~ — attribution` counter-styled line (no `↳`, since it isn't a cross-reference). `what resonates with me` uses literal `* ` bullets (same convention as thoughtcapsules), one per line, no blank lines between. `connections` links relevant verses/prayers already in the archive — chosen for genuine resonance, never forced, may be omitted entirely if nothing genuinely fits — followed by any thought capsule links already curated in the saint's Obsidian note, carried over verbatim but reordered newest-to-oldest, with the date (not the title) as the hyperlink.
 
+Saint cross-linking: anywhere in a saint's file — bio, quotes, what resonates with me, connections — another saint's name appears, it's linked to that saint's page if one already exists: `[Name](post.html?p=saints/{slug}.txt)`. This runs both directions when a new saint is added — see "Saints" workflow step 6 below.
+
 Source content comes from Obsidian, `faith/saints/{name}.md`. If the file doesn't exist yet for a saint the user wants added, remind them to run the `saint-bio` skill first — never draft the bio content from scratch.
 
 This is a separate content type, like the book explainer: no reflection-vs-verse distinction, no source line, no topic cross-link, no "read another one" loop.
@@ -158,6 +160,7 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 3. Add an entry to `saints.html`, alphabetical by name: `<span id="{slug}"></span>↳ <a href="post.html?p=saints/{file}.txt">{Name}</a>`.
 4. Add to `archive.html`, right after the `↳ <a href="all-prayers-archive.html">all prayers</a>` line: `↳ <a href="saints.html#{slug}">{Name}</a>`, alphabetical by name. The generic `↳ <a href="saints.html">saints</a>` link above it is only added once, when the saints section is first introduced — not per saint.
 5. `index.html` only needs updating once, when the saints section is first introduced.
+6. Cross-link with other saints: search all existing `saints/*.txt` files for mentions of the new saint's name and link them retroactively to the new page, `[Name](post.html?p=saints/{slug}.txt)`. Also check the new saint's own text (bio, quotes, what resonates, connections) for mentions of any existing saint and link those there too.
 
 ## The "read another one" loop
 
