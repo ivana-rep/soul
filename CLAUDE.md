@@ -12,6 +12,8 @@ bible/
   {book}_{chapter}-{verse}.txt   e.g. isaiah_60-22.txt
 prayers/
   {title-slug}.txt               e.g. you-are-all-i-need.txt
+what-is-it/
+  {book-slug}.txt                 e.g. isaiah.txt — short explainer of a Bible book, one per book cited in archive.html
 ```
 
 There is no about.txt — its content lives directly in index.html.
@@ -64,7 +66,18 @@ Reflection.
 ```
 Same optionality as bible verses (reflection and source optional, topic cross-link and `read another one` mandatory and last).
 
-Every .txt file (bible or prayer) carries both back-links (index, archive), regardless of type. Links inside .txt files are resolved relative to post.html (which lives at the repo root), so never prefix them with `../` even though the .txt file itself lives in bible/ or prayers/.
+### Book explainer (what-is-it/{book-slug}.txt)
+First line: `Book | what is it` — book capitalized (proper name), `what is it` is always fixed, lowercase, never changes.
+```
+Book | what is it
+↳ [back to index](index.html)
+↳ [back to archive](archive.html)
+
+A few lines explaining what the book is: author/attribution, genre, Old/New Testament, main themes. Factual, concise — no reflection section, no source line, no topic cross-link, no `read another one` loop (this is a third content type, separate from verses and prayers).
+```
+One file per book that has at least one verse cited in `archive.html`. Not part of either "read another one" loop.
+
+Every .txt file (bible, prayer, or book explainer) carries both back-links (index, archive), regardless of type. Links inside .txt files are resolved relative to post.html (which lives at the repo root), so never prefix them with `../` even though the .txt file itself lives in bible/ or prayers/.
 
 ## Formatting syntax (same engine as thoughtcapsules, no day counter)
 - `!!text!!` → highlight
@@ -91,7 +104,7 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 
 ### Bible
 1. Add the new .txt file under bible/.
-2. **Author/book section**: if a `<span id="{book-slug}"></span>{Book}` section already exists, insert the new entry in chapter:verse ascending order among the existing `↳ {chapter}:{verse} <a>...</a>` lines under it (biblical order within the book, not insertion date). If it's a new book, create the section (positioned in canonical biblical order, Genesis → Revelation) and add `<a href="#{book-slug}">{Book}</a>` to the `↳ author / book` index line, in the same canonical position.
+2. **Author/book section**: if a `<span id="{book-slug}"></span>{Book}` section already exists, insert the new entry in chapter:verse ascending order among the existing `↳ {chapter}:{verse} <a>...</a>` lines under it (biblical order within the book, not insertion date). If it's a new book, create the section (positioned in canonical biblical order, Genesis → Revelation) and add `<a href="#{book-slug}">{Book}</a>` to the `↳ author / book` index line, in the same canonical position. A new book also needs a `what-is-it/{book-slug}.txt` explainer file (see "Book explainer" above) and its section header becomes `<span id="{book-slug}"></span>{Book}<span class="counter"> / <a href="post.html?p=what-is-it/{book-slug}.txt">what is it</a></span>`.
 3. **Topic section**: within a topic block, the `verses` sub-section always comes before `prayers` when both exist, with no blank line between them. If a `<span id="{topic-slug}-verses"></span>– verses` sub-section already exists, insert the new entry as the first `↳ {Book} {chapter}:{verse} <a>...</a>` line under it (newest first — note the book name IS included here, since a topic section spans multiple books). If the topic exists but has no `verses` sub-section yet, create it right before any existing `prayers` sub-section. If it's a new topic, create the section (positioned alphabetically among topic sections) and add `<a href="#{topic-slug}">{topic}</a>` to the `↳ topic` index line, alphabetically.
 4. Add the `~ ↳ see other verses on the same topic > [...]` and `> read [another](...) one` lines to the .txt file (see Formatting syntax above, and "The read another one loop" below).
 
@@ -115,9 +128,11 @@ When adding a new entry, it's inserted at the top of the relevant flat list (mak
 - Bible, topic section: `↳ {Book} {chapter}:{verse} <a href="post.html?p=bible/{file}.txt">{title}</a>`
 - Prayers, topic section: `↳ <a href="post.html?p=prayers/{file}.txt">{title}</a>`
 - all-prayers-archive.html / all-verses-archive.html: `↳ <a href="post.html?p={path}/{file}.txt">{title}</a> | <a href="archive.html#{slug}">{secondary}</a>` (secondary = topic for prayers, `{Book} {chapter}:{verse}` for verses)
+- Archive, author/book section header: `<span id="{book-slug}"></span>{Book}<span class="counter"> / <a href="post.html?p=what-is-it/{book-slug}.txt">what is it</a></span>`
 
 ## Naming conventions
 - Bible files: lowercase book name + `_` + chapter-verse, e.g. `isaiah_60-22.txt`, `romans_8-28.txt`.
+- Book explainer files: `what-is-it/{book-slug}.txt`, same book-slug as the bible verse files, e.g. `what-is-it/isaiah.txt`.
 - Prayer files: lowercase title, spaces→`-`, punctuation stripped, e.g. `you-are-all-i-need.txt`. A numeric suffix (`-2`, etc.) is only a rare fallback for a genuine title collision, never the default.
 - Topic is always the first word of the prayer's first line (before ` | `).
 - Book is always the text before the chapter:verse in the bible verse's first line.
