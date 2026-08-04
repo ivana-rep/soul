@@ -158,7 +158,7 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 1. Before creating anything, check `faith/saints/{name}.md` exists in Obsidian. If it doesn't, tell the user to run the `saint-bio` skill first — don't draft the bio yourself.
 2. Add the new .txt file under saints/ (see "Saint bio" file format above), pulling bio/quotes/what-resonates content from the Obsidian note and thought-capsule connections from its `↳ connections` section (reordered newest-to-oldest, date as the link).
 3. Add an entry to `saints.html`, alphabetical by name: `<span id="{slug}"></span>↳ <a href="post.html?p=saints/{file}.txt">{Name}</a>`.
-4. Add to `archive.html`, right after the `↳ <a href="all-prayers-archive.html">all prayers</a>` line: `↳ <a href="saints.html#{slug}">{Name}</a>`, alphabetical by name. The generic `↳ <a href="saints.html">saints</a>` link above it is only added once, when the saints section is first introduced — not per saint.
+4. `archive.html` doesn't get a per-saint entry — only the generic `↳ <a href="saints.html">saints</a>` link, right after the `↳ <a href="all-prayers-archive.html">all prayers</a>` line, added once when the saints section is first introduced.
 5. `index.html` only needs updating once, when the saints section is first introduced.
 6. Cross-link with other saints: search all existing `saints/*.txt` files for mentions of the new saint's name and link them retroactively to the new page, `[Name](post.html?p=saints/{slug}.txt)`. Also check the new saint's own text (bio, quotes, what resonates, connections) for mentions of any existing saint and link those there too.
 
