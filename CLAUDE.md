@@ -87,6 +87,7 @@ Every .txt file (bible, prayer, or book explainer) carries both back-links (inde
 - `~ text` → counter-styled line (small gray, same look as `[N]` markers and the archive-page notes); links inside are still rendered as links. Uses:
   - optional source-attribution line: `~ ↳ source: [name](url)` — the name follows the lowercase rule too, even if it's a person's name (the proper-name exception does not apply here, unlike bible book names)
   - mandatory topic cross-link as the second-to-last line of the file: `~ ↳ see other verses on the same topic > [topic name](archive.html#topic-slug-verses)` (verses) or `~ ↳ see other prayers on the same topic > [topic name](archive.html#topic-slug-prayers)` (prayers) — points to the `verses`/`prayers` sub-section of that topic, not the whole section
+  - on a consolidated topic's principal verse only: one `~ ↳ says the exact same thing > [title](post.html?p=bible/file.txt)` line per secondary verse — see "Same-topic consolidation" below
 - `> read [another](url) one` → not part of the counter-styled engine, a plain line/link. Mandatory, always the last line of every .txt file. Forms a closed loop through ALL verses (via the hidden ordering tracked in `all-verses-archive.html`) and, separately, a closed loop through ALL prayers (via `all-prayers-archive.html`) — see "The read another one loop" below.
 
 ## Lowercase style rule
@@ -122,6 +123,19 @@ Every .txt file ends with `> read [another](post.html?p=...) one`, forming a clo
 - **Verses**: the loop order is tracked by `all-verses-archive.html`, same format and same newest-first convention, but this page is **internal only** — it must never be linked from `archive.html`, `index.html`, or any other public page. It exists purely so the loop's insertion order has somewhere to live.
 
 When adding a new entry, it's inserted at the top of the relevant flat list (making it the new "newest"). Its own `read another one` link points to whichever entry was previously first (the second-newest, going forward). The entry that was previously *last* (oldest) in that same list gets its `read another one` link rewritten to point to the new entry instead — closing the loop back onto what's now newest. Every other entry's link is untouched.
+
+## Same-topic consolidation ("says the exact same thing")
+
+`says the exact same thing` is a stricter relation than `see other verses on the same topic`: the topic link means "related theme," this means "this other verse says the literal same thing." It applies only to verses (never prayers), and only once a topic's `verses` sub-section reaches 3 or more entries.
+
+- When adding a new verse would bring a topic to 3+ verses (and the topic isn't already consolidated): before searching for a principal, judge whether the verses genuinely say the same identical thing (near-duplicate) or cover different angles of the same broader theme — a topic can legitimately have 3+ distinct verses with no principal at all. The threshold is only the trigger for making this judgment call, not a rule that always forces consolidation, and the judgment isn't necessarily all-or-nothing: some verses on a topic may be near-duplicates of each other while another covers a genuinely different angle and stays as its own separate entry. Present the judgment with reasoning and wait for confirmation before proceeding. Re-ask the same question each time a new verse is added to a topic that's over threshold but not consolidated — it doesn't lock in once and for all. Only once verses are confirmed as near-duplicates: search the whole Bible (not just the verses already collected) for the clearest, most explanatory verse on that theme, propose it with reasoning, and confirm with the user. That becomes the **principal** verse — it may be the new verse just added, one of the topic's existing verses, or a verse not yet in the archive (in which case it's created first, through the normal flow).
+- The principal verse's file gets, after its `~ ↳ see other verses on the same topic` line and before `read another one` (blank line above and below the block, no blank line between the block's own lines), one line per other verse on that topic:
+  ```
+  ~ ↳ says the exact same thing > [title](post.html?p=bible/file.txt)
+  ```
+- In `archive.html`, that topic's `verses` sub-section keeps ONLY the principal verse's entry — the other verses' entries are removed from that sub-section. They're untouched everywhere else: still in the author/book section, still in `all-verses-archive.html`, still reachable via the "read another one" loop, still carrying their own `see other verses on the same topic` line (which leads to the now-collapsed topic section, from which the principal's own block leads to them).
+- Once a topic is consolidated, later verses added to it don't repeat the whole-Bible search — they're simply appended as a new line in the principal's existing `says the exact same thing` block, and don't get their own entry in the topic sub-section.
+- A topic is "already consolidated" when its `verses` sub-section has exactly one entry and that entry's file already contains a `says the exact same thing` block.
 
 ## Entry link format
 - Bible, author/book section: `↳ {chapter}:{verse} <a href="post.html?p=bible/{file}.txt">{title}</a>`
