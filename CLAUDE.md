@@ -6,7 +6,7 @@ index.html                  ← homepage: title "soul" + description, links to a
 post.html                   ← single-post viewer (loads .txt via ?p= param)
 archive.html                ← single page for ALL entries (verses and prayers), with two anchor-based indexes (by author/book, by topic)
 all-prayers-archive.html    ← flat list of ALL prayers, newest first, independent of topic — publicly linked from archive.html
-all-verses-archive.html     ← flat list of ALL verses, newest first, independent of book/topic — INTERNAL ONLY, never linked from any public page (tracks insertion order for the "read another one" loop)
+all-verses-archive.html     ← flat list of ALL verses, newest first, independent of book/topic — publicly linked from archive.html (tracks insertion order for the "read another one" loop)
 soulfavicon.png
 bible/
   {book}_{chapter}-{verse}.txt   e.g. isaiah_60-22.txt
@@ -88,7 +88,7 @@ Every .txt file (bible, prayer, or book explainer) carries both back-links (inde
   - optional source-attribution line: `~ ↳ source: [name](url)` — the name follows the lowercase rule too, even if it's a person's name (the proper-name exception does not apply here, unlike bible book names)
   - mandatory topic cross-link as the second-to-last line of the file: `~ ↳ see other verses on the same topic > [topic name](archive.html#topic-slug-verses)` (verses) or `~ ↳ see other prayers on the same topic > [topic name](archive.html#topic-slug-prayers)` (prayers) — points to the `verses`/`prayers` sub-section of that topic, not the whole section
   - on a consolidated topic's principal verse only: one `~ ↳ says the exact same thing > [title](post.html?p=bible/file.txt)` line per secondary verse — see "Same-topic consolidation" below
-- `> read [another](url) one` → not part of the counter-styled engine, a plain line/link. Mandatory, always the last line of every .txt file. Forms a closed loop through ALL verses (via the hidden ordering tracked in `all-verses-archive.html`) and, separately, a closed loop through ALL prayers (via `all-prayers-archive.html`) — see "The read another one loop" below.
+- `> read [another](url) one` → not part of the counter-styled engine, a plain line/link. Mandatory, always the last line of every .txt file. Forms a closed loop through ALL verses (via the ordering tracked in `all-verses-archive.html`) and, separately, a closed loop through ALL prayers (via `all-prayers-archive.html`) — see "The read another one loop" below.
 
 ## Lowercase style rule
 All text, everywhere (.txt content, HTML page text, titles, headings), is lowercase — including the initial letter of sentences and titles — EXCEPT:
@@ -99,7 +99,7 @@ Everything else, including brand names (e.g. "telegram"), sentence-initial words
 
 ## Archive pages: adding a new book, topic, or prayer
 
-`archive.html` is a single page — no per-book or per-topic pages. It has two anchor-based indexes at the top (`↳ author / book` and `↳ topic`, the topic index shared between verses and prayers) followed by the corresponding sections, each headed by an invisible anchor `<span id="slug"></span>Name`. Right after the `↳ topic` index line sits `↳ [all prayers](all-prayers-archive.html)`.
+`archive.html` is a single page — no per-book or per-topic pages. It has two anchor-based indexes at the top (`↳ author / book` and `↳ topic`, the topic index shared between verses and prayers) followed by the corresponding sections, each headed by an invisible anchor `<span id="slug"></span>Name`. Right after the `↳ topic` index line sit `↳ [all verses](all-verses-archive.html)` and `↳ [all prayers](all-prayers-archive.html)`.
 
 Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it, reusing an existing one when it fits — a topic can have only verses, only prayers, or both).
 
@@ -120,7 +120,7 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 Every .txt file ends with `> read [another](post.html?p=...) one`, forming a closed loop that lets a reader keep clicking forward indefinitely, in insertion order. There are two independent loops: one through all bible verses, one through all prayers — they never cross.
 
 - **Prayers**: the loop order is the same order as `all-prayers-archive.html` (newest first, top to bottom), which is a public, linked page.
-- **Verses**: the loop order is tracked by `all-verses-archive.html`, same format and same newest-first convention, but this page is **internal only** — it must never be linked from `archive.html`, `index.html`, or any other public page. It exists purely so the loop's insertion order has somewhere to live.
+- **Verses**: the loop order is tracked by `all-verses-archive.html`, same format and same newest-first convention. It's linked publicly from `archive.html` (`↳ all verses`).
 
 When adding a new entry, it's inserted at the top of the relevant flat list (making it the new "newest"). Its own `read another one` link points to whichever entry was previously first (the second-newest, going forward). The entry that was previously *last* (oldest) in that same list gets its `read another one` link rewritten to point to the new entry instead — closing the loop back onto what's now newest. Every other entry's link is untouched.
 
