@@ -31,6 +31,7 @@ feast day: October 4
 ↳ connections
 ↳ verse: [Luke 12:15 — life is not what you own](post.html?p=bible/luke_12-15.txt)
 ↳ verse: [John 20:19 — Peace be with you](post.html?p=bible/john_20-19.txt)
+↳ verse: [Luke 19:38 — blessings on the King](post.html?p=bible/luke_19-38.txt)
 ↳ prayer: [guard my heart](post.html?p=prayers/guard-my-heart.txt)
 ↳ thought capsule | [2026-06-09](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260609.txt) | Enough
 ↳ thought capsule | [2026-05-12](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260512.txt) | Subtraction
