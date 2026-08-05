@@ -12,4 +12,6 @@ amen.
 
 ~ ↳ see saint connection > [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt)
 
+~ ↳ see saint connection > [Clare of Assisi](post.html?p=saints/clare-of-assisi.txt)
+
 > read [another](post.html?p=prayers/many-troubles-but-you-are-with-me.txt) one
