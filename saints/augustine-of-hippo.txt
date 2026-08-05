@@ -40,6 +40,7 @@ feast day: August 28
 ↳ verse: [Psalms 14:3 — no one does good, not a single one](post.html?p=bible/psalms_14-3.txt)
 ↳ verse: [Romans 5:8 — while we were still sinners](post.html?p=bible/romans_5-8.txt)
 ↳ verse: [1 Chronicles 16:11 — continually seek Him](post.html?p=bible/1-chronicles_16-11.txt)
+↳ prayer: [seek You, find You](post.html?p=prayers/seek-you-find-you.txt)
 ↳ prayer: [with me and within me](post.html?p=prayers/with-me-and-within-me.txt)
 ↳ thought capsule | [2026-06-13](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260613.txt) | To inhabit
 ↳ thought capsule | [2026-06-09](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260609.txt) | Enough
