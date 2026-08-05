@@ -17,6 +17,7 @@ what-is-it/
 saints.html                 ← single page listing every saint, each behind its own anchor id, linking to their individual page
 saints/
   {name-slug}.txt              e.g. francis-of-assisi.txt
+saints-index.txt            ← internal-only map: one block per saint with feast day, theme tags, and current connections — see "Saints connections index" below
 ```
 
 There is no about.txt — its content lives directly in index.html.
@@ -151,14 +152,14 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 2. **Author/book section**: if a `<span id="{book-slug}"></span>{Book}` section already exists, insert the new entry in chapter:verse ascending order among the existing `↳ {chapter}:{verse} <a>...</a>` lines under it (biblical order within the book, not insertion date). If it's a new book, create the section (positioned in canonical biblical order, Genesis → Revelation) and add `<a href="#{book-slug}">{Book}</a>` to the `↳ author / book` index line, in the same canonical position. A new book also needs a `what-is-it/{book-slug}.txt` explainer file (see "Book explainer" above) and its section header becomes `<span id="{book-slug}"></span>{Book}<span class="counter"> / <a href="post.html?p=what-is-it/{book-slug}.txt">what is it</a></span>`.
 3. **Topic section**: within a topic block, the `verses` sub-section always comes before `prayers` when both exist, with no blank line between them. If a `<span id="{topic-slug}-verses"></span>– verses` sub-section already exists, insert the new entry as the first `↳ {Book} {chapter}:{verse} <a>...</a>` line under it (newest first — note the book name IS included here, since a topic section spans multiple books). If the topic exists but has no `verses` sub-section yet, create it right before any existing `prayers` sub-section. If it's a new topic, create the section (positioned alphabetically among topic sections) and add `<a href="#{topic-slug}">{topic}</a>` to the `↳ topic` index line, alphabetically.
 4. Add the `~ ↳ see other verses on the same topic > [...]` and `> read [another](...) one` lines to the .txt file (see Formatting syntax above, and "The read another one loop" below).
-5. Check `saints.html` for a genuinely relevant saint — if the new verse's theme resonates with one, add a `↳ verse: [Book Chapter:Verse — title](post.html?p=bible/{file}.txt)` line to that saint's `connections` section, AND add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to the verse's own .txt file (before `read another one`). Never force it — both sides of the link are added together, or neither.
+5. Check `saints-index.txt` for a genuinely relevant saint (its `themes` lines are the quick filter — confirm any candidate against the saint's actual `saints/{slug}.txt` before linking) — if the new verse's theme resonates with one, add a `↳ verse: [Book Chapter:Verse — title](post.html?p=bible/{file}.txt)` line to that saint's `connections` section, AND add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to the verse's own .txt file (before `read another one`) — then update that saint's `verses` line in `saints-index.txt`. Never force it — both sides of the link are added together, or neither.
 
 ### Prayers
 1. Add the new .txt file under prayers/, named `{title-slug}.txt` — never `{topic}_{NN}.txt`. Verify the title slug doesn't collide with any existing prayer filename (uniqueness is checked across ALL prayers, not per topic).
 2. **Topic section**: same logic as verses above, but for the `– prayers` sub-section (which comes after `verses` when both exist, no blank line between).
 3. Insert the new entry as the first line of `all-prayers-archive.html` (newest first): `↳ <a href="post.html?p=prayers/{file}.txt">{title}</a> | <a href="archive.html#{topic-slug}-prayers">{topic}</a>`.
 4. Add the `~ ↳ see other prayers on the same topic > [...]` and `> read [another](...) one` lines to the .txt file.
-5. Check `saints.html` for a genuinely relevant saint — if the new prayer's theme resonates with one, add a `↳ prayer: [title](post.html?p=prayers/{file}.txt)` line to that saint's `connections` section, AND add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to the prayer's own .txt file (before `read another one`). Never force it — both sides of the link are added together, or neither.
+5. Check `saints-index.txt` for a genuinely relevant saint (its `themes` lines are the quick filter — confirm any candidate against the saint's actual `saints/{slug}.txt` before linking) — if the new prayer's theme resonates with one, add a `↳ prayer: [title](post.html?p=prayers/{file}.txt)` line to that saint's `connections` section, AND add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to the prayer's own .txt file (before `read another one`) — then update that saint's `prayers` line in `saints-index.txt`. Never force it — both sides of the link are added together, or neither.
 
 ### Saints
 1. Before creating anything, check `faith/saints/{name}.md` exists in Obsidian. If it doesn't, tell the user to run the `saint-bio` skill first — don't draft the bio yourself.
@@ -168,6 +169,7 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 5. `archive.html` doesn't get a per-saint entry — only the generic `↳ <a href="saints.html">saints</a>` link, right after the `↳ <a href="all-prayers-archive.html">all prayers</a>` line, added once when the saints section is first introduced.
 6. `index.html` only needs updating once, when the saints section is first introduced.
 7. Cross-link with other saints: search all existing `saints/*.txt` files for mentions of the new saint's name and link them retroactively to the new page, `[Name](post.html?p=saints/{slug}.txt)`. Also check the new saint's own text (bio, quotes, what resonates, connections) for mentions of any existing saint and link those there too.
+8. Add the new saint's block to `saints-index.txt` (alphabetically among the others) — slug, name, feast day, a handful of theme tags drawn from the bio/what-resonates content, and the connections just added in step 3. See "Saints connections index" above.
 
 ## The "read another one" loop
 
@@ -197,6 +199,17 @@ When adding a new entry, it's inserted at the top of the relevant flat list (mak
 - Prayers, topic section: `↳ <a href="post.html?p=prayers/{file}.txt">{title}</a>`
 - all-prayers-archive.html / all-verses-archive.html: `↳ <a href="post.html?p={path}/{file}.txt">{title}</a> | <a href="archive.html#{slug}">{secondary}</a>` (secondary = topic for prayers, `{Book} {chapter}:{verse}` for verses)
 - Archive, author/book section header: `<span id="{book-slug}"></span>{Book}<span class="counter"> / <a href="post.html?p=what-is-it/{book-slug}.txt">what is it</a></span>`
+
+## Saints connections index
+
+`saints-index.txt` is a plain internal map, one block per saint (slug, name, feast day, a handful of theme tags, and its current verse/prayer/thought-capsule connections). It is never linked from any page, isn't part of any "read another one" loop, and the lowercase style rule doesn't apply to it — it exists purely so a saint-connection check can be done by reading this one file instead of every `saints/*.txt` in full.
+
+Consult it instead of opening every saint file whenever checking for a genuine verse/prayer/saint connection (Bible step 5, Prayers step 5, Saints step 3 below). Whenever a connection, saint, or theme changes anywhere on the site, update `saints-index.txt` in the same commit:
+- new saint added → add its block, alphabetically among the others.
+- new verse/prayer connection added to a saint → append it to that saint's `verses`/`prayers` line.
+- a saint's "what resonates" text changes in a way that shifts its themes → update the `themes` line.
+
+If this file and the `saints/*.txt` files ever disagree, the `.txt` files are the source of truth — treat the mismatch as a bug to fix in the index, not in them.
 
 ## Naming conventions
 - Bible files: lowercase book name + `_` + chapter-verse, e.g. `isaiah_60-22.txt`, `romans_8-28.txt`.

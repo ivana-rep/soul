@@ -1,0 +1,46 @@
+SAINTS CONNECTIONS INDEX — internal use only
+
+Not part of the site's content (never linked from any page, not part of the
+"read another one" loops, no lowercase-style rule applies here). Purpose:
+quick lookup of each saint's existing connections and core themes, so that
+adding a new verse/prayer/saint can check for genuine resonance without
+re-reading every saints/*.txt in full — same role all-verses-archive.html
+and all-prayers-archive.html play for the two "read another one" loops.
+
+KEEP IN SYNC: whenever a saint is added, or a verse/prayer/saint connection
+is added or removed anywhere on the site, update this file in the same
+commit. If this file and the saints/*.txt files ever disagree, the .txt
+files are the source of truth — treat a mismatch as a bug to fix here, not
+in them.
+
+---
+
+anthony-of-padua | Anthony of Padua | feast: June 13
+themes: preaching, hidden gifts surfacing sideways/unplanned, mentorship & recognition (Francis), Doctor of the Church, incorrupt relic / legacy
+verses: Luke 12:15 (life is not what you own) | Romans 8:28 (everything happens for a reason)
+prayers: —
+capsules: 2026-07-15 In the doing | 2026-07-13 From the inside
+
+augustine-of-hippo | Augustine of Hippo | feast: August 28
+themes: conversion, restlessness/seeking God, sin & grace, providence/timing, indwelling of Christ
+verses: Isaiah 60:22 (at the right time) | Colossians 1:27 (Christ lives in you) | Psalms 34:19 (the Lord comes to the rescue) | Psalms 14:3 (no one does good, not a single one) | Romans 5:8 (while we were still sinners) | 1 Chronicles 16:11 (continually seek Him)
+prayers: seek You, find You | with me and within me
+capsules: 2026-06-13 To inhabit | 2026-06-09 Enough | 2026-06-02 Discovery
+
+clare-of-assisi | Clare of Assisi | feast: August 11
+themes: poverty / Privilege of Poverty, stillness as courage (siege of San Damiano), mentorship through letters (Agnes of Prague), contemplation / mirror imagery, legacy
+verses: Luke 12:15 (life is not what you own) | John 15:4-5 (remain in me)
+prayers: guard my heart
+capsules: —
+
+francis-of-assisi | Francis of Assisi | feast: October 4
+themes: simplicity & minimalism, poverty, nature/creation as reflection of God, peace, subtraction, legacy (Poor Clares, Nativity tradition, Canticle of the Creatures)
+verses: Genesis 1:1 (in the beginning) | Luke 12:15 (life is not what you own) | John 20:19 (Peace be with you) | Luke 19:38 (blessings on the King)
+prayers: guard my heart
+capsules: 2026-06-09 Enough | 2026-05-12 Subtraction | 2026-03-31 Form, not constraint | 2026-03-22 Smaller patch | 2026-03-09 Gratitude as act | 2026-02-11 Complicating water
+
+joseph | Joseph | feast: March 19 (also venerated May 1 as St. Joseph the Worker)
+themes: silence / lack of recorded words, translation & the weight of a single word, mercy chosen over what the law allows, quiet dignity of labor, legacy
+verses: Romans 12:19 (never take revenge)
+prayers: —
+capsules: 2026-04-21 Recognition | 2026-04-18 The gap
