@@ -36,6 +36,8 @@ feast day: August 28
 ↳ connections
 ↳ verse: [Isaiah 60:22 — at the right time](post.html?p=bible/isaiah_60-22.txt)
 ↳ verse: [Colossians 1:27 — Christ lives in you](post.html?p=bible/colossians_1-27.txt)
+↳ verse: [Psalms 34:19 — the Lord comes to the rescue](post.html?p=bible/psalms_34-19.txt)
+↳ verse: [Psalms 14:3 — no one does good, not a single one](post.html?p=bible/psalms_14-3.txt)
 ↳ prayer: [with me and within me](post.html?p=prayers/with-me-and-within-me.txt)
 ↳ thought capsule | [2026-06-13](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260613.txt) | To inhabit
 ↳ thought capsule | [2026-06-09](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260609.txt) | Enough
