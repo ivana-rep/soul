@@ -35,7 +35,7 @@ capsules: —
 
 francis-of-assisi | Francis of Assisi | feast: October 4
 themes: simplicity & minimalism, poverty, nature/creation as reflection of God, peace, subtraction, legacy (Poor Clares, Nativity tradition, Canticle of the Creatures)
-verses: Genesis 1:1 (in the beginning) | Luke 12:15 (life is not what you own) | John 20:19 (Peace be with you) | Luke 19:38 (blessings on the King)
+verses: Genesis 1:1 (in the beginning) | Luke 12:15 (life is not what you own) | John 20:19 (Peace be with you) | Luke 19:38 (blessings on the King) | John 14:27 (peace as a gift)
 prayers: guard my heart
 capsules: 2026-06-09 Enough | 2026-05-12 Subtraction | 2026-03-31 Form, not constraint | 2026-03-22 Smaller patch | 2026-03-09 Gratitude as act | 2026-02-11 Complicating water
 
