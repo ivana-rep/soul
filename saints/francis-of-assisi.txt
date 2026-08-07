@@ -36,7 +36,9 @@ feast day: October 4
 ↳ verse: [John 20:19 — Peace be with you](post.html?p=bible/john_20-19.txt)
 ↳ verse: [John 14:27 — peace as a gift](post.html?p=bible/john_14-27.txt)
 ↳ verse: [Luke 19:38 — blessings on the King](post.html?p=bible/luke_19-38.txt)
+↳ verse: [Psalms 40:3 — a new song to sing](post.html?p=bible/psalms_40-3.txt)
 ↳ prayer: [guard my heart](post.html?p=prayers/guard-my-heart.txt)
+↳ prayer: [let my life be a song of praise](post.html?p=prayers/let-my-life-be-a-song-of-praise.txt)
 ↳ thought capsule | [2026-06-09](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260609.txt) | Enough
 ↳ thought capsule | [2026-05-12](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260512.txt) | Subtraction
 ↳ thought capsule | [2026-03-31](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260331.txt) | Form, not constraint
