@@ -150,7 +150,7 @@ Every .txt file (bible, prayer, book explainer, or saint bio) carries both back-
 
 ## Lowercase style rule
 All text, everywhere (.txt content, HTML page text, titles, headings), is lowercase — including the initial letter of sentences and titles — EXCEPT:
-- words referring directly to God/religion: Lord, God, Him, His, Heaven, You/Your (when addressing God directly), and similar
+- words referring directly to God/religion: Lord, God, Him, His, Heaven, Kingdom, You/Your (when addressing God directly), and similar
 - words referring to a saint: He, Him, His, and similar — same exception as God-references, anywhere on the site a saint is discussed (not only on their own page)
 - proper names: book names (Isaiah, Genesis, Matthew...), people's names
 
