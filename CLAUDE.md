@@ -156,6 +156,8 @@ All text, everywhere (.txt content, HTML page text, titles, headings), is lowerc
 
 Everything else, including brand names (e.g. "telegram"), sentence-initial words, and the pronoun "I" (when referring to a human, not God or a saint speaking of themself), is lowercase.
 
+The NLT source text sometimes renders the divine name as "LORD" (small caps, representing YHWH). On this site it's always written "Lord" — never "LORD" — regardless of how the NLT source formats it. This applies going forward only; existing files are not being retroactively corrected as part of this rule.
+
 ## Archive pages: adding a new book, topic, or prayer
 
 `archive.html` is a single page — no per-book or per-topic pages. It has two anchor-based indexes at the top (`↳ author / book` and `↳ topic`, the topic index shared between verses and prayers) followed by the corresponding sections, each headed by an invisible anchor `<span id="slug"></span>Name`. Right after the `↳ topic` index line sit `↳ [all verses](all-verses-archive.html)` and `↳ [all prayers](all-prayers-archive.html)`.
@@ -214,6 +216,25 @@ Consult it instead of opening every saint file whenever checking for a genuine v
 - a saint's "what resonates" text changes in a way that shifts its themes → update the `themes` line.
 
 If this file and the `saints/*.txt` files ever disagree, the `.txt` files are the source of truth — treat the mismatch as a bug to fix in the index, not in them.
+
+## Prayer & devotion cross-links
+
+Every prayer (all existing ones, and every future one) carries a `~ ↳ related verses >` block linking to **every** verse currently in the `prayer-devotion` topic — unlike an ordinary `related verses`/`related prayers` block, this one is automatic and exhaustive, not selective: every prayer is itself an act of the practice those verses describe, so the link always applies, never needs judgment, and is never omitted. It sits in the normal `related verses` slot (after any saint-connection/related-prayers block, before `read another one`):
+```
+~ ↳ related verses >
+~ [Colossians 4:2 | devote yourself to prayer](post.html?p=bible/colossians_4-2.txt)
+```
+One line per verse in the topic, in the same order they appear under `prayer-devotion-verses` in `archive.html`.
+
+The link is **not bidirectional**. Verses in the `prayer-devotion` topic do not list individual prayers back — they carry one fixed line instead, right after the topic cross-link line:
+```
+~ ↳ see all prayers > [all prayers](all-prayers-archive.html)
+```
+
+Maintenance implications:
+- **New prayer added** (any topic): its `related verses` block must list every verse currently under `prayer-devotion`, per the rule above — this happens automatically as part of adding the prayer, not as a separate judgment call.
+- **New verse added to the `prayer-devotion` topic**: give it the `see all prayers` line at creation, AND go back and add a line for it to the `related verses` block of every existing prayer on the site (all of them, not just `prayer-devotion`-topic prayers).
+- **New verse added to any other topic**: no effect here.
 
 ## Naming conventions
 - Bible files: lowercase book name + `_` + chapter-verse, e.g. `isaiah_60-22.txt`, `romans_8-28.txt`.
