@@ -47,6 +47,7 @@ feast day: August 28
 ↳ prayer: [seek You, find You](post.html?p=prayers/seek-you-find-you.txt)
 ↳ prayer: [with me and within me](post.html?p=prayers/with-me-and-within-me.txt)
 ↳ prayer: [form something in me](post.html?p=prayers/form-something-in-me.txt)
+↳ commonplace: [not waiting for nothing](post.html?p=commonplace/not-waiting-for-nothing.txt)
 ↳ thought capsule | [2026-06-13](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260613.txt) | To inhabit
 ↳ thought capsule | [2026-06-09](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260609.txt) | Enough
 ↳ thought capsule | [2026-06-02](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260602.txt) | Discovery
