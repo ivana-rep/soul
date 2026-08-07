@@ -4,14 +4,17 @@
 ```
 index.html                  ← homepage: title "soul" + description, links to archive.html and all-prayers-archive.html inline
 post.html                   ← single-post viewer (loads .txt via ?p= param)
-archive.html                ← single page for ALL entries (verses and prayers), with two anchor-based indexes (by author/book, by topic)
+archive.html                ← single page for ALL verses and prayers, with two anchor-based indexes (by author/book, by topic) — commonplace entries are NOT part of this page's topic system, see below
 all-prayers-archive.html    ← flat list of ALL prayers, newest first, independent of topic — publicly linked from archive.html
 all-verses-archive.html     ← flat list of ALL verses, newest first, independent of book/topic — publicly linked from archive.html (tracks insertion order for the "read another one" loop)
+all-commonplace-archive.html ← flat list of ALL commonplace entries, newest first — publicly linked from archive.html (tracks insertion order for the "see another one" loop)
 soulfavicon.png
 bible/
   {book}_{chapter}-{verse}.txt   e.g. isaiah_60-22.txt
 prayers/
   {title-slug}.txt               e.g. you-are-all-i-need.txt
+commonplace/
+  {title-slug}.txt               e.g. share-your-faith.txt — quotes/prompts with no scripture reference, no prayer address to God, and no saint attribution (see "Commonplace" file format below)
 what-is-it/
   {book-slug}.txt                 e.g. isaiah.txt — short explainer of a Bible book, one per book cited in archive.html
 saints.html                 ← single page listing every saint, each behind its own anchor id, linking to their individual page
@@ -88,6 +91,35 @@ Reflection.
 ```
 Same optionality and structure as bible verses above: source (if present) sits right after the prayer text, before the reflection; the reflection, if present, is wrapped in an opening and closing `---`; everything from there onward is counter-styled except `read another one`, which stays a plain link and is no longer required to be the file's last line. The topic cross-link (`see other prayers on the same topic`, unchanged) is mandatory. The saint-connection line is optional, same rule as bible verses. The `related prayers` block is optional and selective, same rule as `related verses` — one `~ [title](url)` line per related prayer (no reference/chapter needed here, just the title). The thought-capsule line is optional, same format as bible verses.
 
+### Commonplace (commonplace/{title-slug}.txt)
+For quotes/prompts that don't fit bible verse, prayer, or saint bio: no scripture reference, not addressed to God, not a known saint's own words — e.g. a quote from a book, an unattributed devotional-app prompt. A commonplace-book style catch-all, separate from the topic system entirely (no topic assignment, no section in `archive.html`).
+
+First line: `title | author` — title lowercase (same rule as prayer titles), author omitted entirely (no ` | ` at all) when the quote is unattributed. Unlike the bible/prayer `source:` line, the author name here DOES follow the proper-name exception (capitalized, like a person's name) since it's a byline, not a source citation.
+```
+title | author
+↳ [back to index](index.html)
+↳ [back to archive](archive.html)
+
+\ quote text (blockquote syntax, one line per line of the quote; may use !!highlight!!, same as bible verses)
+
+---
+
+~ ↳ source: [name](url)
+
+~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)
+
+~ ↳ related verses >
+~ [Book Chapter:Verse | title](post.html?p=bible/file.txt)
+
+~ ↳ related prayers >
+~ [title](post.html?p=prayers/file.txt)
+
+> see [another](post.html?p=commonplace/next-file.txt) one
+
+~ ↳ thought capsule | [YYYY-MM-DD](url) | title
+```
+No reflection section (the quote is the content, never a separate reflection block) — so there's only ever a single `---`, dividing the quote from the counter-styled block below it. Everything from immediately after that `---` onward is counter-styled, with the sole exception of `see [another](...) one` (the commonplace equivalent of `read another one` — different wording, same plain-link rule, still not required to be the file's last line). The optional `source` line sits first in the counter block (unlike bible/prayer, it comes after the `---`, not before, since there's no reflection to precede). Saint-connection, related-verses, and related-prayers blocks are all optional and selective, same "never force it" rule as elsewhere, same bidirectional-linking convention. The thought-capsule line is optional, same format as bible verses/prayers.
+
 ### Book explainer (what-is-it/{book-slug}.txt)
 First line: `Book | what is it` — book capitalized (proper name), `what is it` is always fixed, lowercase, never changes.
 ```
@@ -123,9 +155,10 @@ YYYY | fact
 ↳ connections
 ↳ verse: [Book Chapter:Verse — title](post.html?p=bible/file.txt)
 ↳ prayer: [title](post.html?p=prayers/file.txt)
+↳ commonplace: [title](post.html?p=commonplace/file.txt)
 ↳ thought capsule | [YYYY-MM-DD](url) | title
 ```
-Every section is headed by `↳ section name` (lowercase), with one blank line between sections and no blank line inside a section. The `bio` timeline is chronological (birth → death/canonization), not newest-first — the only place on the site where entries aren't newest-first. Quotes use the `\ ` blockquote syntax (one line per line of the quote) followed by a `~ — attribution` counter-styled line (no `↳`, since it isn't a cross-reference). `what resonates with me` uses literal `* ` bullets (same convention as thoughtcapsules), one per line, no blank lines between. `connections` links relevant verses/prayers already in the archive — chosen for genuine resonance, never forced, may be omitted entirely if nothing genuinely fits — followed by any thought capsule links already curated in the saint's Obsidian note, carried over verbatim but reordered newest-to-oldest, with the date (not the title) as the hyperlink. Every verse/prayer connection is bidirectional: the linked bible/prayer file gets a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line of its own (see the bible/prayer Formatting syntax above) — never link only from the saint's side.
+Every section is headed by `↳ section name` (lowercase), with one blank line between sections and no blank line inside a section. The `bio` timeline is chronological (birth → death/canonization), not newest-first — the only place on the site where entries aren't newest-first. Quotes use the `\ ` blockquote syntax (one line per line of the quote) followed by a `~ — attribution` counter-styled line (no `↳`, since it isn't a cross-reference). `what resonates with me` uses literal `* ` bullets (same convention as thoughtcapsules), one per line, no blank lines between. `connections` links relevant verses/prayers/commonplace entries already in the archive — chosen for genuine resonance, never forced, may be omitted entirely if nothing genuinely fits — followed by any thought capsule links already curated in the saint's Obsidian note, carried over verbatim but reordered newest-to-oldest, with the date (not the title) as the hyperlink. Every verse/prayer/commonplace connection is bidirectional: the linked file gets a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line of its own (see the bible/prayer/commonplace Formatting syntax above) — never link only from the saint's side.
 
 Saint cross-linking: anywhere in a saint's file — bio, quotes, what resonates with me, connections — another saint's name appears, it's linked to that saint's page if one already exists: `[Name](post.html?p=saints/{slug}.txt)`. This runs both directions when a new saint is added — see "Saints" workflow step 7 below.
 
@@ -133,7 +166,7 @@ Source content comes from Obsidian, `faith/saints/{name}.md`. If the file doesn'
 
 This is a separate content type, like the book explainer: no reflection-vs-verse distinction, no source line, no topic cross-link, no "read another one" loop.
 
-Every .txt file (bible, prayer, book explainer, or saint bio) carries both back-links (index, archive), regardless of type. Links inside .txt files are resolved relative to post.html (which lives at the repo root), so never prefix them with `../` even though the .txt file itself lives in bible/ or prayers/.
+Every .txt file (bible, prayer, commonplace, book explainer, or saint bio) carries both back-links (index, archive), regardless of type. Links inside .txt files are resolved relative to post.html (which lives at the repo root), so never prefix them with `../` even though the .txt file itself lives in bible/, prayers/, or commonplace/.
 
 ## Formatting syntax (same engine as thoughtcapsules, no day counter)
 - `!!text!!` → highlight
@@ -158,9 +191,9 @@ Everything else, including brand names (e.g. "telegram"), sentence-initial words
 
 The NLT source text sometimes renders the divine name as "LORD" (small caps, representing YHWH). On this site it's always written "Lord" — never "LORD" — regardless of how the NLT source formats it. This applies going forward only; existing files are not being retroactively corrected as part of this rule.
 
-## Archive pages: adding a new book, topic, or prayer
+## Archive pages: adding a new book, topic, prayer, or commonplace entry
 
-`archive.html` is a single page — no per-book or per-topic pages. It has two anchor-based indexes at the top (`↳ author / book` and `↳ topic`, the topic index shared between verses and prayers) followed by the corresponding sections, each headed by an invisible anchor `<span id="slug"></span>Name`. Right after the `↳ topic` index line sit `↳ [all verses](all-verses-archive.html)` and `↳ [all prayers](all-prayers-archive.html)`.
+`archive.html` is a single page — no per-book or per-topic pages. It has two anchor-based indexes at the top (`↳ author / book` and `↳ topic`, the topic index shared between verses and prayers) followed by the corresponding sections, each headed by an invisible anchor `<span id="slug"></span>Name`. Right after the `↳ topic` index line sit `↳ [all verses](all-verses-archive.html)`, `↳ [all prayers](all-prayers-archive.html)`, and `↳ [all commonplace](all-commonplace-archive.html)`. Commonplace entries have no topic and no section of their own in `archive.html` — this flat-list link is their only presence on the page.
 
 Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it, reusing an existing one when it fits — a topic can have only verses, only prayers, or both).
 
@@ -188,20 +221,29 @@ Every entry (verse or prayer) is assigned exactly one topic (Claude proposes it,
 7. Cross-link with other saints: search all existing `saints/*.txt` files for mentions of the new saint's name and link them retroactively to the new page, `[Name](post.html?p=saints/{slug}.txt)`. Also check the new saint's own text (bio, quotes, what resonates, connections) for mentions of any existing saint and link those there too.
 8. Add the new saint's block to `saints-index.txt` (alphabetically among the others) — slug, name, feast day, a handful of theme tags drawn from the bio/what-resonates content, and the connections just added in step 3. See "Saints connections index" above.
 
+### Commonplace
+1. Add the new .txt file under commonplace/, named `{title-slug}.txt` (see "Commonplace" file format above). No topic assignment, no `archive.html` section — skip straight to the steps below.
+2. Insert the new entry as the first line of `all-commonplace-archive.html` (newest first): `↳ <a href="post.html?p=commonplace/{file}.txt">{title}</a>`.
+3. Check `saints-index.txt` for a genuinely relevant saint, same "never force it" rule as verses/prayers — if genuine, add a `↳ commonplace: [title](post.html?p=commonplace/{file}.txt)` line to that saint's `connections` section, AND add a matching `~ ↳ see saint connection > [Name](post.html?p=saints/{slug}.txt)` line to the commonplace entry's own .txt file, then update that saint's connections line in `saints-index.txt`.
+4. Check for genuinely related verses/prayers already on the site (same selective, never-forced rule) — if found, add `~ ↳ related verses >` / `~ ↳ related prayers >` blocks to the commonplace entry, per the "Commonplace" format above. These links are NOT bidirectional — no bible or prayer file ever gets a "related commonplace" line back (same one-directional rule already established for prayer → verse links).
+5. Add the `> see [another](...) one` line to the .txt file (see "The read another one loop" below) — same chain-rewiring mechanics as verses/prayers, using `all-commonplace-archive.html` as the ordering source.
+
 ## The "read another one" loop
 
-Every .txt file ends with `> read [another](post.html?p=...) one`, forming a closed loop that lets a reader keep clicking forward indefinitely, in insertion order. There are two independent loops: one through all bible verses, one through all prayers — they never cross.
+Every bible/prayer .txt file ends with `> read [another](post.html?p=...) one`, forming a closed loop that lets a reader keep clicking forward indefinitely, in insertion order. There are three independent loops: one through all bible verses, one through all prayers, one through all commonplace entries (using `see` instead of `read`, see below) — they never cross.
 
 - **Prayers**: the loop order is the same order as `all-prayers-archive.html` (newest first, top to bottom), which is a public, linked page.
 - **Verses**: the loop order is tracked by `all-verses-archive.html`, same format and same newest-first convention. It's linked publicly from `archive.html` (`↳ all verses`).
+- **Commonplace**: every commonplace .txt file ends with `> see [another](post.html?p=commonplace/...) one` instead — same closed-loop mechanics, different wording, entirely separate ring. The loop order is tracked by `all-commonplace-archive.html`, same newest-first convention, linked publicly from `archive.html` (`↳ all commonplace`).
 
-When adding a new entry, it's inserted at the top of the relevant flat list (making it the new "newest"). Its own `read another one` link points to whichever entry was previously first (the second-newest, going forward). The entry that was previously *last* (oldest) in that same list gets its `read another one` link rewritten to point to the new entry instead — closing the loop back onto what's now newest. Every other entry's link is untouched.
+When adding a new entry, it's inserted at the top of the relevant flat list (making it the new "newest"). Its own `read another one` (or `see another one`, for commonplace) link points to whichever entry was previously first (the second-newest, going forward). The entry that was previously *last* (oldest) in that same list gets its link rewritten to point to the new entry instead — closing the loop back onto what's now newest. Every other entry's link is untouched.
 
 ## Entry link format
 - Bible, author/book section: `↳ {chapter}:{verse} <a href="post.html?p=bible/{file}.txt">{title}</a>`
 - Bible, topic section: `↳ {Book} {chapter}:{verse} <a href="post.html?p=bible/{file}.txt">{title}</a>`
 - Prayers, topic section: `↳ <a href="post.html?p=prayers/{file}.txt">{title}</a>`
 - all-prayers-archive.html / all-verses-archive.html: `↳ <a href="post.html?p={path}/{file}.txt">{title}</a> | <a href="archive.html#{slug}">{secondary}</a>` (secondary = topic for prayers, `{Book} {chapter}:{verse}` for verses)
+- all-commonplace-archive.html: `↳ <a href="post.html?p=commonplace/{file}.txt">{title}</a>` (no secondary link — commonplace has no topic)
 - Archive, author/book section header: `<span id="{book-slug}"></span>{Book}<span class="counter"> / <a href="post.html?p=what-is-it/{book-slug}.txt">what is it</a></span>`
 - Related verses (inside a .txt file, in a `~ ↳ related verses >` block): `[Book Chapter:Verse | title](post.html?p=bible/{file}.txt)` — reference and title, never title alone
 - Related prayers (inside a .txt file, in a `~ ↳ related prayers >` block): `[title](post.html?p=prayers/{file}.txt)`
@@ -241,6 +283,7 @@ Maintenance implications:
 - Book explainer files: `what-is-it/{book-slug}.txt`, same book-slug as the bible verse files, e.g. `what-is-it/isaiah.txt`.
 - Prayer files: lowercase title, spaces→`-`, punctuation stripped, e.g. `you-are-all-i-need.txt`. A numeric suffix (`-2`, etc.) is only a rare fallback for a genuine title collision, never the default.
 - Saint files: canonical English name, lowercase, spaces→`-`, e.g. `francis-of-assisi.txt`.
+- Commonplace files: lowercase title, spaces→`-`, punctuation stripped, e.g. `share-your-faith.txt`. Same rare-collision fallback as prayer files.
 - Topic is always the first word of the prayer's first line (before ` | `).
 - Book is always the text before the chapter:verse in the bible verse's first line.
 - Slugs (topic, book) are the lowercased name with spaces and `&` replaced by `-` (e.g. `rest-stillness`).
