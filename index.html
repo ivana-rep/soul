@@ -78,6 +78,32 @@
           text-decoration-color: var(--mark-dark);
         }
       }
+
+      .counter {
+        color: #767676;
+        font-size: 0.8em;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .counter {
+          color: #999;
+        }
+      }
+
+      #search-input {
+        font: inherit;
+        font-size: inherit;
+        color: var(--fg);
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--link);
+        outline: none;
+        width: 200px;
+      }
+
+      #search-input::placeholder {
+        color: #767676;
+      }
     </style>
   </head>
 
@@ -92,8 +118,134 @@ digital devotional journal
 ↳ <a href="saints.html">saints</a> whose lives and words resonate with me
 ↳ <a href="all-commonplace-archive.html">commonplace</a>, quotes on spirituality and religion
 
+↳ search: <input type="text" id="search-input" placeholder="keyword" autocomplete="off" spellcheck="false"> <span class="counter" id="search-status"></span>
+<span id="search-results"></span>
+
 ↳ contact: <a href="https://t.me/ivana_tg">telegram @ivana_tg</a>
 ↳ other projects: <a href="https://ivana-rep.github.io/thoughtcapsules/">thought capsules</a>
 </pre>
+
+<script>
+(function () {
+  const input = document.getElementById("search-input");
+  const status = document.getElementById("search-status");
+  const results = document.getElementById("search-results");
+
+  const listingPages = [
+    "all-verses-archive.html",
+    "all-prayers-archive.html",
+    "all-commonplace-archive.html",
+    "saints.html",
+    "archive.html"
+  ];
+
+  let indexPromise = null;
+  let timer = null;
+
+  function typeLabel(path) {
+    if (path.startsWith("bible/")) return "verse";
+    if (path.startsWith("prayers/")) return "prayer";
+    if (path.startsWith("commonplace/")) return "commonplace";
+    if (path.startsWith("saints/")) return "saint";
+    if (path.startsWith("what-is-it/")) return "what is it";
+    return "";
+  }
+
+  function escapeHTML(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function buildIndex() {
+    if (indexPromise) return indexPromise;
+
+    indexPromise = Promise.all(
+      listingPages.map(page =>
+        fetch(page).then(r => r.text()).catch(() => "")
+      )
+    ).then(pages => {
+      const found = new Map();
+      const linkRe = /<a href="post\.html\?p=([^"]+\.txt)">([^<]*)<\/a>/g;
+
+      for (const html of pages) {
+        let m;
+        while ((m = linkRe.exec(html))) {
+          if (!found.has(m[1])) found.set(m[1], m[2]);
+        }
+      }
+
+      return Promise.all(
+        [...found.entries()].map(([path, title]) =>
+          fetch(path)
+            .then(r => r.text())
+            .then(text => ({ path, title, text }))
+            .catch(() => null)
+        )
+      ).then(entries => entries.filter(Boolean));
+    });
+
+    return indexPromise;
+  }
+
+  function snippet(text, query) {
+    const at = text.toLowerCase().indexOf(query.toLowerCase());
+    if (at === -1) return "";
+
+    const start = Math.max(0, at - 40);
+    const end = Math.min(text.length, at + query.length + 40);
+    const excerpt = escapeHTML(text.slice(start, end).replace(/\s+/g, " ").trim());
+    const highlighted = excerpt.replace(
+      new RegExp(escapeRegExp(escapeHTML(query)), "ig"),
+      m => `<mark>${m}</mark>`
+    );
+
+    return (start > 0 ? "…" : "") + highlighted + (end < text.length ? "…" : "");
+  }
+
+  function search(query) {
+    buildIndex().then(entries => {
+      const q = query.toLowerCase();
+      const matches = entries.filter(e => e.text.toLowerCase().includes(q));
+
+      if (matches.length === 0) {
+        status.textContent = "no results";
+        results.innerHTML = "";
+        return;
+      }
+
+      status.textContent = matches.length + " result" + (matches.length === 1 ? "" : "s");
+
+      results.innerHTML = matches
+        .map(e => {
+          const line1 = `↳ <a href="post.html?p=${e.path}">${escapeHTML(e.title)}</a><span class="counter"> // ${typeLabel(e.path)}</span>`;
+          const line2 = `<span class="counter">   ${snippet(e.text, query)}</span>`;
+          return line1 + "\n" + line2;
+        })
+        .join("\n\n") + "\n";
+    });
+  }
+
+  input.addEventListener("input", () => {
+    clearTimeout(timer);
+    const query = input.value.trim();
+
+    if (query.length < 2) {
+      status.textContent = "";
+      results.innerHTML = "";
+      return;
+    }
+
+    status.textContent = "searching…";
+    timer = setTimeout(() => search(query), 250);
+  });
+})();
+</script>
+
   </body>
 </html>
