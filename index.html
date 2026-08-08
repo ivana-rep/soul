@@ -118,7 +118,7 @@ digital devotional journal
 ↳ <a href="saints.html">saints</a> whose lives and words resonate with me
 ↳ <a href="all-commonplace-archive.html">commonplace</a>, quotes on spirituality and religion
 
-↳ search: <input type="text" id="search-input" placeholder="keyword" autocomplete="off" spellcheck="false"> <span class="counter" id="search-status"></span>
+↳ search: <input type="text" id="search-input" placeholder="keyword" autocomplete="off" spellcheck="false"> <span class="counter" id="search-status"></span> <span class="counter" id="search-clear" style="display:none">// <a href="#" id="search-clear-link">clear results</a></span>
 <span id="search-results"></span>
 
 ↳ contact: <a href="https://t.me/ivana_tg">telegram @ivana_tg</a>
@@ -130,6 +130,8 @@ digital devotional journal
   const input = document.getElementById("search-input");
   const status = document.getElementById("search-status");
   const results = document.getElementById("search-results");
+  const clearWrap = document.getElementById("search-clear");
+  const clearLink = document.getElementById("search-clear-link");
 
   const listingPages = [
     "all-verses-archive.html",
@@ -238,11 +240,22 @@ digital devotional journal
     if (query.length < 2) {
       status.textContent = "";
       results.innerHTML = "";
+      clearWrap.style.display = "none";
       return;
     }
 
     status.textContent = "searching…";
+    clearWrap.style.display = "";
     timer = setTimeout(() => search(query), 250);
+  });
+
+  clearLink.addEventListener("click", e => {
+    e.preventDefault();
+    input.value = "";
+    status.textContent = "";
+    results.innerHTML = "";
+    clearWrap.style.display = "none";
+    input.focus();
   });
 })();
 </script>
