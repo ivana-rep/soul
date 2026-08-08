@@ -119,6 +119,7 @@
     .then(text => {
       const lines = text.split("\n"); // DO NOT trim
       const out = [];
+      let markOpen = false; // tracks !! highlight state across lines
 
       for (let line of lines) {
 
@@ -144,8 +145,13 @@
         let processed = escapeHTML(line)
           .replace(/\[(\d+)\]\s?/g, '<span class="counter">$1</span> ');
 
-        // highlights
-        processed = processed.replace(/!!(.*?)!!/g, "<mark>$1</mark>");
+        // highlights (may span multiple lines)
+        const segments = processed.split("!!");
+        processed = segments[0];
+        for (let i = 1; i < segments.length; i++) {
+          processed += (markOpen ? "</mark>" : "<mark>") + segments[i];
+          markOpen = !markOpen;
+        }
 
         // links
         processed = processed.replace(
