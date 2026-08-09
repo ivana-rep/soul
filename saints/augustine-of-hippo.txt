@@ -44,6 +44,8 @@ feast day: August 28
 ↳ verse: [Galatians 5:1-26 — we wait through the Spirit](post.html?p=bible/galatians_5-1-26.txt)
 ↳ verse: [Ecclesiastes 3:1-8 — for everything there is a season](post.html?p=bible/ecclesiastes_3-1-8.txt)
 ↳ verse: [Psalms 86:11 — teach me your ways](post.html?p=bible/psalms_86-11.txt)
+↳ verse: [Romans 3:23 — we all fall short](post.html?p=bible/romans_3-23.txt)
+↳ verse: [Romans 6:23 — the free gift of God](post.html?p=bible/romans_6-23.txt)
 ↳ prayer: [seek You, find You](post.html?p=prayers/seek-you-find-you.txt)
 ↳ prayer: [with me and within me](post.html?p=prayers/with-me-and-within-me.txt)
 ↳ prayer: [form something in me](post.html?p=prayers/form-something-in-me.txt)
