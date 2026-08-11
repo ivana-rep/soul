@@ -35,6 +35,7 @@ feast day: October 4
 ↳ verse: [Luke 12:15 — life is not what you own](post.html?p=bible/luke_12-15.txt)
 ↳ verse: [John 20:19 — Peace be with you](post.html?p=bible/john_20-19.txt)
 ↳ verse: [John 14:21-27 — peace as a gift](post.html?p=bible/john_14-21-27.txt)
+↳ verse: [2 Thessalonians 3:16 — the Lord be with you](post.html?p=bible/2-thessalonians_3-16.txt)
 ↳ verse: [Luke 19:38 — blessings on the King](post.html?p=bible/luke_19-38.txt)
 ↳ verse: [Matthew 5:1-48 — the Sermon on the Mount](post.html?p=bible/matthew_5-1-48.txt)
 ↳ verse: [Psalms 40:3 — a new song to sing](post.html?p=bible/psalms_40-3.txt)
