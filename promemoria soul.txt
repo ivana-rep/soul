@@ -1,3 +1,5 @@
+// LEGGI I VERSETTI E AGGIUNGI LE RIFLESSIONI DOVE MANCANTI
+
 // costruire una pagina che spiega la mia "routine" di preghiera
 
 // santi francescani da approfondire (in soul ho già Francesco, Antonio da Padova, Chiara)
