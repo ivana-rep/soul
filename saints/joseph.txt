@@ -29,5 +29,6 @@ c. AD 405 | St. Jerome's Vulgate renders Joseph's response to Mary's pregnancy w
 ↳ verse: [Romans 12:21 — conquer evil with good](post.html?p=bible/romans_12-21.txt)
 ↳ verse: [Matthew 5:44 — love your enemies](post.html?p=bible/matthew_5-44.txt)
 ↳ prayer: [love people like You love people](post.html?p=prayers/love-people-like-you-love-people.txt)
+↳ prayer: [choosing to forgive](post.html?p=prayers/choosing-to-forgive.txt)
 ↳ thought capsule | [2026-04-21](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260421.txt) | Recognition
 ↳ thought capsule | [2026-04-18](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260418.txt) | The gap
