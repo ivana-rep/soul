@@ -32,6 +32,7 @@ feast day: October 4
 
 ↳ connections
 ↳ verse: [Genesis 1:1 — in the beginning](post.html?p=bible/genesis_1-1.txt)
+↳ verse: [Numbers 6:24-26 — the lord bless you and keep you](post.html?p=bible/numbers_6-24-26.txt)
 ↳ verse: [Luke 12:15 — life is not what you own](post.html?p=bible/luke_12-15.txt)
 ↳ verse: [John 20:19 — Peace be with you](post.html?p=bible/john_20-19.txt)
 ↳ verse: [John 14:21-27 — peace as a gift](post.html?p=bible/john_14-21-27.txt)
