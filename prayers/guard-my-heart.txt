@@ -11,9 +11,9 @@ amen.
 
 ~ ↳ see other prayers on the same topic > [greed & contentment](archive.html#greed-contentment-prayers)
 
-~ ↳ see saint connection > [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt)
-
-~ ↳ see saint connection > [Clare of Assisi](post.html?p=saints/clare-of-assisi.txt)
+~ ↳ see saint connection >
+~ [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt)
+~ [Clare of Assisi](post.html?p=saints/clare-of-assisi.txt)
 
 ~ ↳ related verses >
 ~ [2 Chronicles 7:14 | if My people humble themselves](post.html?p=bible/2-chronicles_7-14.txt)
