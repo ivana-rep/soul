@@ -11,7 +11,8 @@ amen.
 
 ~ ↳ see other prayers on the same topic > [gratitude](archive.html#gratitude-prayers)
 
-~ ↳ see saint connection > [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt)
+~ ↳ see saint connection >
+~ [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt)
 
 ~ ↳ related prayers >
 ~ [every breath i take](post.html?p=prayers/every-breath-i-take.txt)
