@@ -38,6 +38,7 @@ feast day: October 4
 ↳ verse: [2 Thessalonians 3:16 — the Lord be with you](post.html?p=bible/2-thessalonians_3-16.txt)
 ↳ verse: [Matthew 5:1-48 — the Sermon on the Mount](post.html?p=bible/matthew_5-1-48.txt)
 ↳ verse: [Psalms 40:3 — a new song to sing](post.html?p=bible/psalms_40-3.txt)
+↳ verse: [Psalms 113:3 — praise the Lord](post.html?p=bible/psalms_113-3.txt)
 ↳ prayer: [guard my heart](post.html?p=prayers/guard-my-heart.txt)
 ↳ prayer: [let my life be a song of praise](post.html?p=prayers/let-my-life-be-a-song-of-praise.txt)
 ↳ prayer: [thank God](post.html?p=prayers/thank-god.txt)

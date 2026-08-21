@@ -36,7 +36,7 @@ capsules: —
 
 francis-of-assisi | Francis of Assisi | feast: October 4
 themes: simplicity & minimalism, poverty, nature/creation as reflection of God, peace, subtraction, legacy (Poor Clares, Nativity tradition, Canticle of the Creatures)
-verses: Numbers 6:24-26 (the lord bless you and keep you) | Luke 12:15 (life is not what you own) | John 20:19 (Peace be with you) | John 14:21-27 (peace as a gift) | Psalms 40:3 (a new song to sing) | Matthew 5:1-48 (the Sermon on the Mount) | 2 Thessalonians 3:16 (the Lord be with you)
+verses: Numbers 6:24-26 (the lord bless you and keep you) | Luke 12:15 (life is not what you own) | John 20:19 (Peace be with you) | John 14:21-27 (peace as a gift) | Psalms 40:3 (a new song to sing) | Matthew 5:1-48 (the Sermon on the Mount) | 2 Thessalonians 3:16 (the Lord be with you) | Psalms 113:3 (praise the Lord)
 prayers: guard my heart | let my life be a song of praise | thank God | i will praise You
 capsules: 2026-06-09 Enough | 2026-05-12 Subtraction | 2026-03-31 Form, not constraint | 2026-03-22 Smaller patch | 2026-03-09 Gratitude as act | 2026-02-11 Complicating water
 
