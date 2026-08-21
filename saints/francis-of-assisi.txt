@@ -39,6 +39,7 @@ feast day: October 4
 ↳ verse: [Matthew 5:1-48 — the Sermon on the Mount](post.html?p=bible/matthew_5-1-48.txt)
 ↳ verse: [Psalms 40:3 — a new song to sing](post.html?p=bible/psalms_40-3.txt)
 ↳ verse: [Psalms 113:3 — praise the Lord](post.html?p=bible/psalms_113-3.txt)
+↳ verse: [Psalms 28:7 — my strength and shield](post.html?p=bible/psalms_28-7.txt)
 ↳ prayer: [guard my heart](post.html?p=prayers/guard-my-heart.txt)
 ↳ prayer: [let my life be a song of praise](post.html?p=prayers/let-my-life-be-a-song-of-praise.txt)
 ↳ prayer: [thank God](post.html?p=prayers/thank-god.txt)
