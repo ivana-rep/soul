@@ -54,6 +54,7 @@ feast day: August 28
 ↳ verse: [Romans 13:14 — clothe yourself with Christ](post.html?p=bible/romans_13-14.txt)
 ↳ verse: [2 Corinthians 12:9-10 — My grace is all you need](post.html?p=bible/2-corinthians_12-9-10.txt)
 ↳ verse: [Jeremiah 33:3 — remarkable secrets you do not know](post.html?p=bible/jeremiah_33-3.txt)
+↳ verse: [Romans 7:14-25 — the war within](post.html?p=bible/romans_7-14-25.txt)
 ↳ prayer: [seek You, find You](post.html?p=prayers/seek-you-find-you.txt)
 ↳ prayer: [with me and within me](post.html?p=prayers/with-me-and-within-me.txt)
 ↳ prayer: [form something in me](post.html?p=prayers/form-something-in-me.txt)
