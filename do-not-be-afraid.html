@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>soul — do not be afraid, I've called you by name, you are mine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
+
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #111111;
+        --link: #005bff;
+
+        --mark-light: rgba(255, 241, 118, 0.9);
+        --mark-dark: rgba(255, 235, 59, 0.9);
+        --quote-fg: #555;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000000;
+          --fg: #ffffff;
+          --link: #8fc9ed;
+          --quote-fg: #bbb;
+        }
+      }
+
+      html, body { height: 100%; }
+      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        line-height: 1.35;
+        -webkit-font-smoothing: antialiased;
+        padding: 16px;
+        padding-bottom: 120px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        body {
+          font-size: 12.6px;
+        }
+      }
+
+      a, a:visited {
+        color: var(--link);
+        text-decoration: none;
+      }
+
+      a:hover { text-decoration: underline; }
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      mark {
+        background: none;
+        color: inherit;
+        padding: 0 2px;
+        background-image: linear-gradient(
+          transparent 62%,
+          var(--mark-light) 62%
+        );
+      }
+
+      @media (prefers-color-scheme: dark) {
+        mark {
+          background: none;
+          padding: 0;
+          color: var(--fg);
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 0.15em;
+          text-decoration-color: var(--mark-dark);
+        }
+      }
+
+      .quote {
+        color: var(--quote-fg);
+      }
+
+      .counter {
+        color: #767676;
+        font-size: 0.8em;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .counter {
+          color: #999;
+        }
+      }
+
+      main {
+        max-width: 900px;
+      }
+
+      .question {
+        margin: 40px 0;
+      }
+
+      .q-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 8px 28px;
+        align-items: start;
+      }
+
+      @media (max-width: 640px) {
+        .q-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .explain {
+        margin: 0;
+      }
+
+      .verses {
+        margin: 0;
+      }
+
+      .verse-item {
+        margin: 0 0 14px 0;
+      }
+
+      .verse-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .verse-quote {
+        display: block;
+        color: var(--quote-fg);
+        font-size: 0.85em;
+        margin-top: 2px;
+      }
+
+      .closing {
+        margin-top: 48px;
+      }
+    </style>
+  </head>
+
+  <body>
+<pre>
+<mark>do not be afraid, I've called you by name, you are mine</mark>
+↳ <a href="index.html">back to index</a>
+↳ <a href="archive.html">back to archive</a>
+
+<span class="counter">1</span> but now, o Jacob, listen to the Lord who created you.
+o Israel, the one who formed you says,
+"<mark>do not be afraid, for I have ransomed you.
+I have called you by name; you are mine.</mark>"
+
+<span class="counter">↳ note: this is a devotional speech I found somewhere, made stitching together paraphrases of several bible passages, spoken as if God is talking directly to you. each verse is linked.</span>
+</pre>
+
+<main style="margin-top: 40px;">
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">before I formed you in the womb, I knew you.</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/jeremiah_1-5.txt">Jeremiah 1:5 | before I formed you, I knew you</a><span class="verse-quote">"I knew you before I formed you in your mother's womb"</span></div>
+</div>
+</div>
+</div>
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">you are my beloved, and in you I am well pleased. I have chosen you.</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/matthew_3-17.txt">Matthew 3:17 | my dearly loved Son, who brings me great joy</a><span class="verse-quote">"this is my dearly loved Son, who brings me great joy"</span></div>
+</div>
+</div>
+</div>
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">I have loved you with an everlasting love. do you not perceive it?</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/jeremiah_31-3.txt">Jeremiah 31:3 | an everlasting love</a><span class="verse-quote">"I have loved you, my people, with an everlasting love"</span></div>
+</div>
+</div>
+</div>
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">for I know well the plans I have for you — plans for your good, not for woe, to give you a future full of hope.</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/jeremiah_29-11.txt">Jeremiah 29:11 | he already knows</a><span class="verse-quote">"plans for good and not for disaster, to give you a future and a hope"</span></div>
+</div>
+</div>
+</div>
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">when you call to me, I will listen to you; when you seek me, you will find me.</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/jeremiah_29-12.txt">Jeremiah 29:12 | when you pray, I will listen</a><span class="verse-quote">"in those days when you pray, I will listen"</span></div>
+<div class="verse-item"><a href="post.html?p=bible/jeremiah_29-13.txt">Jeremiah 29:13 | you will find Me</a><span class="verse-quote">"if you look for Me wholeheartedly, you will find Me"</span></div>
+</div>
+</div>
+</div>
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">for I am with you. I will strengthen you, I will help you, I will uphold you, I will fight for you.</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/isaiah_41-10.txt">Isaiah 41:10 | don't be afraid</a><span class="verse-quote">"I will strengthen you and help you"</span></div>
+<div class="verse-item"><a href="post.html?p=bible/exodus_14-14.txt">Exodus 14:14 | the Lord Himself will fight for you</a><span class="verse-quote">"the Lord Himself will fight for you. just stay calm"</span></div>
+</div>
+</div>
+</div>
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">and so, my beloved — come to me. return to me with all your heart.</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/joel_2-12.txt">Joel 2:12 | turn to me now, while there is time</a><span class="verse-quote">"turn to me now, while there is time. give me your hearts"</span></div>
+</div>
+</div>
+</div>
+
+<div class="question">
+<div class="q-grid">
+<pre class="explain">for behold, I am with you always.</pre>
+<div class="verses">
+<div class="verse-item"><a href="post.html?p=bible/matthew_28-20.txt">Matthew 28:20 | I am with you always</a><span class="verse-quote">"I am with you always, even to the end of the age"</span></div>
+</div>
+</div>
+</div>
+
+<pre class="closing">do not be afraid. I've called you by name — you are mine.</pre>
+
+<pre style="margin-top: 48px;">> see <a href="post.html?p=commonplace/when-youre-a-good-swimmer-people-dont-know-youre-drowning.txt">another</a> one</pre>
+
+</main>
+  </body>
+</html>
