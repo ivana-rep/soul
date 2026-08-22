@@ -16,6 +16,7 @@
       --mark-light: rgba(255, 241, 118, 0.9);
       --mark-dark: rgba(255, 235, 59, 0.9);
       --quote-fg: #555;
+      --quote-bg: rgba(17, 17, 17, 0.06);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -23,7 +24,8 @@
         --bg: #000000;
         --fg: #ffffff;
         --link: #8fc9ed;
-        --quote-fg: #bbb;
+        --quote-fg: #999;
+        --quote-bg: rgba(255, 255, 255, 0.16);
       }
     }
 
@@ -53,8 +55,7 @@
 
     a:hover { text-decoration: underline; }
 
-    pre {
-      margin: 0;
+    #content {
       white-space: pre-wrap;
       word-wrap: break-word;
     }
@@ -80,8 +81,11 @@
       }
     }
 
-    .quote {
+    .quote-box {
       color: var(--quote-fg);
+      background: var(--quote-bg);
+      border-radius: 3px;
+      padding: 10px 14px;
     }
 
     .counter {
@@ -99,7 +103,7 @@
 
 <body>
 
-<pre id="content">Loading…</pre>
+<div id="content">Loading…</div>
 
 <script>
 (function () {
@@ -121,16 +125,48 @@
       const lines = text.split("\n"); // DO NOT trim
       const out = [];
       let markOpen = false; // tracks !! highlight state across lines
+      let quoteBuf = null; // buffers consecutive blockquote lines into one box
+
+      // verse number + highlight + link processing, shared by normal and blockquote lines
+      function processLine(line) {
+        let processed = escapeHTML(line)
+          .replace(/\[(\d+)\]\s?/g, '<span class="counter">$1</span> ');
+
+        const segments = processed.split("!!");
+        processed = segments[0];
+        for (let i = 1; i < segments.length; i++) {
+          processed += (markOpen ? "</mark>" : "<mark>") + segments[i];
+          markOpen = !markOpen;
+        }
+
+        processed = processed.replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          (m, text, link) => `<a href="${link}">${text}</a>`
+        );
+
+        return processed;
+      }
+
+      function flushQuote() {
+        if (quoteBuf) {
+          out.push(
+            `<div class="quote-box">` +
+            quoteBuf.map(l => `<div>${l}</div>`).join("") +
+            `</div>`
+          );
+          quoteBuf = null;
+        }
+      }
 
       for (let line of lines) {
 
-        // blockquote: \ text
+        // blockquote: \ text (consecutive lines grouped into one box)
         if (line.startsWith("\\ ")) {
-          out.push(
-            `<span class="quote">|- ${escapeHTML(line.slice(2))}</span>`
-          );
+          if (!quoteBuf) quoteBuf = [];
+          quoteBuf.push(processLine(line.slice(2)));
           continue;
         }
+        flushQuote();
 
         // source note: ~ text (counter-styled line, links still processed)
         if (line.startsWith("~ ")) {
@@ -142,28 +178,9 @@
           continue;
         }
 
-        // verse number: [N] anywhere in the line (multi-verse quotes)
-        let processed = escapeHTML(line)
-          .replace(/\[(\d+)\]\s?/g, '<span class="counter">$1</span> ');
-
-        // highlights (may span multiple lines)
-        const segments = processed.split("!!");
-        processed = segments[0];
-        for (let i = 1; i < segments.length; i++) {
-          processed += (markOpen ? "</mark>" : "<mark>") + segments[i];
-          markOpen = !markOpen;
-        }
-
-        // links
-        processed = processed.replace(
-          /\[([^\]]+)\]\(([^)]+)\)/g,
-          (m, text, link) => {
-            return `<a href="${link}">${text}</a>`;
-          }
-        );
-
-        out.push(processed);
+        out.push(processLine(line));
       }
+      flushQuote();
 
       content.innerHTML = out.join("\n"); // PRESERVE EMPTY LINES
     })
