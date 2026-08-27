@@ -151,7 +151,7 @@
         if (quoteBuf) {
           out.push(
             `<div class="quote-box">` +
-            quoteBuf.map(l => `<div>${l}</div>`).join("") +
+            quoteBuf.map(l => `<div>${l || "&nbsp;"}</div>`).join("") +
             `</div>`
           );
           quoteBuf = null;
