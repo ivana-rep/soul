@@ -59,6 +59,8 @@ feast day: August 28
 ↳ prayer: [seek You, find You](post.html?p=prayers/seek-you-find-you.txt)
 ↳ prayer: [with me and within me](post.html?p=prayers/with-me-and-within-me.txt)
 ↳ prayer: [form something in me](post.html?p=prayers/form-something-in-me.txt)
+↳ prayer: [i cannot heal myself](post.html?p=prayers/i-cannot-heal-myself.txt)
+↳ prayer: [what faithful love looks like](post.html?p=prayers/what-faithful-love-looks-like.txt)
 ↳ commonplace: [not waiting for nothing](post.html?p=commonplace/not-waiting-for-nothing.txt)
 ↳ commonplace: [the God shaped hole](post.html?p=commonplace/the-god-shaped-hole.txt)
 ↳ commonplace: [why did Jesus have to die for me to be forgiven](post.html?p=commonplace/why-did-jesus-have-to-die-for-me-to-be-forgiven.txt)
