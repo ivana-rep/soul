@@ -49,5 +49,7 @@ mid-1960s | Pope Paul VI dismisses all remaining accusations, closing five decad
 ↳ connections
 ↳ verse: [2 Corinthians 12:9-10 — my power works best in weakness](post.html?p=bible/2-corinthians_12-9-10.txt)
 ↳ verse: [James 1:2-4 — let it grow](post.html?p=bible/james_1-2-4.txt)
+↳ verse: [Psalms 73:21-26 — the strength of my heart](post.html?p=bible/psalms_73-21-26.txt)
+↳ verse: [1 Peter 2:24 — by his wounds you are healed](post.html?p=bible/1-peter_2-24.txt)
 ↳ prayer: [suffer willingly for You](post.html?p=prayers/suffer-willingly-for-you.txt)
 ↳ commonplace: [the reason i'm still standing](post.html?p=commonplace/the-reason-im-still-standing.txt)
