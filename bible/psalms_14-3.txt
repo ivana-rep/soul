@@ -21,7 +21,7 @@ it isn't the whole psalm's conclusion though — it still ends looking toward Go
 ~ [Augustine of Hippo](post.html?p=saints/augustine-of-hippo.txt)
 
 ~ ↳ related verses >
-~ [Romans 3:10 | no one is righteous](post.html?p=bible/romans_3-10.txt)
-~ [Psalms 34:17-19 | the Lord comes to the rescue](post.html?p=bible/psalms_34-17-19.txt)
+~ [Romans 3:10](post.html?p=bible/romans_3-10.txt) | no one is righteous
+~ [Psalms 34:17-19](post.html?p=bible/psalms_34-17-19.txt) | the Lord comes to the rescue
 
 > read [another](post.html?p=bible/romans_3-10.txt) one

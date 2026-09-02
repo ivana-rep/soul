@@ -18,7 +18,7 @@ words aren't neutral — they land somewhere, and what they build or break tends
 ~ [Anthony of Padua](post.html?p=saints/anthony-of-padua.txt)
 
 ~ ↳ related verses >
-~ [Proverbs 13:3 | control your tongue](post.html?p=bible/proverbs_13-3.txt)
-~ [Proverbs 12:18 | words that heal](post.html?p=bible/proverbs_12-18.txt)
+~ [Proverbs 13:3](post.html?p=bible/proverbs_13-3.txt) | control your tongue
+~ [Proverbs 12:18](post.html?p=bible/proverbs_12-18.txt) | words that heal
 
 > read [another](post.html?p=bible/psalms_139-23.txt) one

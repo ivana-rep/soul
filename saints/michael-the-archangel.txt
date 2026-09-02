@@ -29,9 +29,9 @@ c. 165 BCE | named in the [book of Daniel](post.html?p=bible/daniel_12-1.txt) as
 * His legacy is entirely functional rather than biographical: patron of soldiers, police officers, paramedics, and the dying; namesake of Mont-Saint-Michel, Castel Sant'Angelo, and countless parishes and cathedrals across Europe; and, in catholic angelology, the fixed reference point against which every fallen angel is defined by contrast.
 
 ↳ connections
-↳ verse: [Daniel 12:1 — the archangel who stands guard](post.html?p=bible/daniel_12-1.txt)
-↳ verse: [Jude 1:9 — the Lord rebuke you](post.html?p=bible/jude_1-9.txt)
-↳ verse: [Revelation 12:7 — war in heaven](post.html?p=bible/revelation_12-7.txt)
-↳ verse: [Romans 12:19 — never take revenge](post.html?p=bible/romans_12-19.txt)
-↳ verse: [Isaiah 54:17 — no weapon will succeed](post.html?p=bible/isaiah_54-17.txt)
-↳ verse: [Proverbs 13:10 — pride leads to conflict](post.html?p=bible/proverbs_13-10.txt)
+↳ verse: [Daniel 12:1](post.html?p=bible/daniel_12-1.txt) — the archangel who stands guard
+↳ verse: [Jude 1:9](post.html?p=bible/jude_1-9.txt) — the Lord rebuke you
+↳ verse: [Revelation 12:7](post.html?p=bible/revelation_12-7.txt) — war in heaven
+↳ verse: [Romans 12:19](post.html?p=bible/romans_12-19.txt) — never take revenge
+↳ verse: [Isaiah 54:17](post.html?p=bible/isaiah_54-17.txt) — no weapon will succeed
+↳ verse: [Proverbs 13:10](post.html?p=bible/proverbs_13-10.txt) — pride leads to conflict
