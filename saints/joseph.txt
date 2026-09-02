@@ -23,12 +23,12 @@ c. AD 405 | St. Jerome's Vulgate renders Joseph's response to Mary's pregnancy w
 * His broader legacy: called Patron of the Universal Church in 1870, given a feast tied to the dignity of labor in 1955, and inserted into the Roman Canon of the Mass in 1962, immediately after Mary's — three separate centuries, three separate popes, formally elevating a figure who !!disappears from Scripture's narrative before Jesus' public ministry even begins!!. the record of His life is brief; the record of what the Church kept deciding to do with His memory is not.
 
 ↳ connections
-↳ verse: [Proverbs 19:11 — overlooking an offense](post.html?p=bible/proverbs_19-11.txt)
-↳ verse: [Romans 12:19 — never take revenge](post.html?p=bible/romans_12-19.txt)
-↳ verse: [Mark 11:23-25 — ask, believe, forgive](post.html?p=bible/mark_11-23-25.txt)
-↳ verse: [Luke 6:36 — be compassionate](post.html?p=bible/luke_6-36.txt)
-↳ verse: [Romans 12:21 — conquer evil with good](post.html?p=bible/romans_12-21.txt)
-↳ verse: [Matthew 5:1-48 — the Sermon on the Mount](post.html?p=bible/matthew_5-1-48.txt)
+↳ verse: [Proverbs 19:11](post.html?p=bible/proverbs_19-11.txt) — overlooking an offense
+↳ verse: [Romans 12:19](post.html?p=bible/romans_12-19.txt) — never take revenge
+↳ verse: [Mark 11:23-25](post.html?p=bible/mark_11-23-25.txt) — ask, believe, forgive
+↳ verse: [Luke 6:36](post.html?p=bible/luke_6-36.txt) — be compassionate
+↳ verse: [Romans 12:21](post.html?p=bible/romans_12-21.txt) — conquer evil with good
+↳ verse: [Matthew 5:1-48](post.html?p=bible/matthew_5-1-48.txt) — the Sermon on the Mount
 ↳ prayer: [love people like You love people](post.html?p=prayers/love-people-like-you-love-people.txt)
 ↳ prayer: [choosing to forgive](post.html?p=prayers/choosing-to-forgive.txt)
 ↳ thought capsule | [2026-04-21](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260421.txt) | Recognition

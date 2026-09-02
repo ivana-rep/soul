@@ -31,15 +31,15 @@ feast day: October 4
 * His broader legacy: the Order of Friars Minor and the Poor Clares still exist as living communities eight centuries later; the Nativity scene He improvised at Greccio in 1223 became a tradition still set up every December; even the Canticle of the Creatures, composed nearly blind near the end of His life, stands as the first poem in the Italian vernacular — !!a founder of religious orders and, almost by accident, of Italian literature!!. few figures leave that wide a footprint without ever writing a theological treatise.
 
 ↳ connections
-↳ verse: [Numbers 6:24-26 — the lord bless you and keep you](post.html?p=bible/numbers_6-24-26.txt)
-↳ verse: [Luke 12:15 — life is not what you own](post.html?p=bible/luke_12-15.txt)
-↳ verse: [John 20:19 — Peace be with you](post.html?p=bible/john_20-19.txt)
-↳ verse: [John 14:21-27 — peace as a gift](post.html?p=bible/john_14-21-27.txt)
-↳ verse: [2 Thessalonians 3:16 — the Lord be with you](post.html?p=bible/2-thessalonians_3-16.txt)
-↳ verse: [Matthew 5:1-48 — the Sermon on the Mount](post.html?p=bible/matthew_5-1-48.txt)
-↳ verse: [Psalms 40:3 — a new song to sing](post.html?p=bible/psalms_40-3.txt)
-↳ verse: [Psalms 113:3 — praise the Lord](post.html?p=bible/psalms_113-3.txt)
-↳ verse: [Psalms 28:7 — my strength and shield](post.html?p=bible/psalms_28-7.txt)
+↳ verse: [Numbers 6:24-26](post.html?p=bible/numbers_6-24-26.txt) — the lord bless you and keep you
+↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own
+↳ verse: [John 20:19](post.html?p=bible/john_20-19.txt) — Peace be with you
+↳ verse: [John 14:21-27](post.html?p=bible/john_14-21-27.txt) — peace as a gift
+↳ verse: [2 Thessalonians 3:16](post.html?p=bible/2-thessalonians_3-16.txt) — the Lord be with you
+↳ verse: [Matthew 5:1-48](post.html?p=bible/matthew_5-1-48.txt) — the Sermon on the Mount
+↳ verse: [Psalms 40:3](post.html?p=bible/psalms_40-3.txt) — a new song to sing
+↳ verse: [Psalms 113:3](post.html?p=bible/psalms_113-3.txt) — praise the Lord
+↳ verse: [Psalms 28:7](post.html?p=bible/psalms_28-7.txt) — my strength and shield
 ↳ prayer: [guard my heart](post.html?p=prayers/guard-my-heart.txt)
 ↳ prayer: [let my life be a song of praise](post.html?p=prayers/let-my-life-be-a-song-of-praise.txt)
 ↳ prayer: [thank God](post.html?p=prayers/thank-god.txt)
