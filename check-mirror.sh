@@ -16,7 +16,7 @@ if [ -z "$SOULIT" ] || [ ! -d "$SOULIT" ]; then
   exit 1
 fi
 
-echo "== 1/3: soul -> soul-it language-selector round trip =="
+echo "== 1/4: soul -> soul-it language-selector round trip =="
 for dir in prayers commonplace saints bible what-is-it; do
   for f in "$SOUL/$dir"/*.txt; do
     [ -f "$f" ] || continue
@@ -31,7 +31,7 @@ for dir in prayers commonplace saints bible what-is-it; do
   done
 done
 
-echo "== 2/3: soul-it -> soul language-selector round trip =="
+echo "== 2/4: soul-it -> soul language-selector round trip =="
 for dir in prayers commonplace saints bible what-is-it; do
   for f in "$SOULIT/$dir"/*.txt; do
     [ -f "$f" ] || continue
@@ -46,7 +46,27 @@ for dir in prayers commonplace saints bible what-is-it; do
   done
 done
 
-echo "== 3/3: internal dangling post.html?p= links within each repo =="
+echo "== 3/4: soul content files with no mirror at all (missing language-selector line) =="
+for dir in prayers commonplace saints bible what-is-it; do
+  for f in "$SOUL/$dir"/*.txt; do
+    [ -f "$f" ] || continue
+    grep -qE 'ivana-rep\.github\.io/soul-it/post\.html\?p=' "$f" || {
+      echo "NO MIRROR (soul): $dir/$(basename "$f") has no en->it language-selector line at all"
+      FAIL=1
+    }
+  done
+done
+for dir in prayers commonplace saints bible what-is-it; do
+  for f in "$SOULIT/$dir"/*.txt; do
+    [ -f "$f" ] || continue
+    grep -qE 'ivana-rep\.github\.io/soul/post\.html\?p=' "$f" || {
+      echo "NO MIRROR (soul-it): $dir/$(basename "$f") has no it->en language-selector line at all"
+      FAIL=1
+    }
+  done
+done
+
+echo "== 4/4: internal dangling post.html?p= links within each repo =="
 # Only matches post.html?p=... when it's a genuine same-repo reference —
 # i.e. immediately preceded by href=" or ]( — never a fragment inside a
 # full cross-repo/cross-site URL like https://.../soul-it/post.html?p=...
