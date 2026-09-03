@@ -2,6 +2,7 @@ saint | Anthony of Padua
 ↳ [back to index](index.html)
 ↳ [back to archive](archive.html)
 ↳ [back to saints](saints.html)
+↳ en // [it](https://ivana-rep.github.io/soul-it/post.html?p=saints/antonio-di-padova.txt)
 
 ↳ bio
 feast day: June 13
@@ -39,8 +40,8 @@ feast day: June 13
 * His broader legacy: named a Doctor of the Church seven centuries after His death — one of the few given that title for preaching itself, not for founding an order or settling a doctrinal dispute, !!Doctor Evangelicus, doctor of the Gospel!!. the discovery of His incorrupt tongue thirty-two years after death became its own argument for the same claim: what set Him apart wasn't a body of writing left behind, but a voice — and even His body kept making that case once He'd stopped speaking.
 
 ↳ connections
-↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own
-↳ verse: [Romans 8:28](post.html?p=bible/romans_8-28.txt) — everything happens for a reason
-↳ verse: [Proverbs 18:21](post.html?p=bible/proverbs_18-21.txt) — the tongue can bring death or life
+↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own *
+↳ verse: [Romans 8:28](post.html?p=bible/romans_8-28.txt) — everything happens for a reason *
+↳ verse: [Proverbs 18:21](post.html?p=bible/proverbs_18-21.txt) — the tongue can bring death or life *
 ↳ thought capsule | [2026-07-15](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260715.txt) | In the doing
 ↳ thought capsule | [2026-07-13](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260713.txt) | From the inside
