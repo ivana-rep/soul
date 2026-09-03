@@ -2,6 +2,7 @@ saint | Augustine of Hippo
 ↳ [back to index](index.html)
 ↳ [back to archive](archive.html)
 ↳ [back to saints](saints.html)
+↳ en // [it](https://ivana-rep.github.io/soul-it/post.html?p=saints/agostino-d-ippona.txt)
 
 ↳ bio
 feast day: August 28
@@ -28,24 +29,24 @@ feast day: August 28
 
 ↳ what resonates with me
 * as Saint [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt), Augustine is contemporary and if we read into Him carefully we can find important teachings to navigate our modern life.
-* the Confessions open with one of the densest sentences in western philosophy: "You have made us for Yourself, and our heart is restless until it rests in You." Augustine doesn't describe His own restlessness as a spiritual failure, He reads it as the ontological structure of the human heart. desire never saturates: every joy fades just enough to generate another. !!sixteen centuries later the same mechanism drives infinite scroll, endless search, the quiet hunger for something that "is finally enough." the modern world has replaced Augustine's prayer with a search bar, same destination (something to quiet the restlessness), different direction: outward instead of inward.!! restlessness doesn't prove shallowness — it proves depth. [Isaiah 60:22](post.html?p=bible/isaiah_60-22.txt) ("I will hasten it in its time") shares the same structure of waiting: a heart that finds no rest in finite things, awaiting a fulfillment it cannot bring about itself.
+* the Confessions open with one of the densest sentences in western philosophy: "You have made us for Yourself, and our heart is restless until it rests in You." Augustine doesn't describe His own restlessness as a spiritual failure, He reads it as the ontological structure of the human heart. desire never saturates: every joy fades just enough to generate another. !!sixteen centuries later the same mechanism drives infinite scroll, endless search, the quiet hunger for something that "is finally enough." the modern world has replaced Augustine's prayer with a search bar, same destination (something to quiet the restlessness), different direction: outward instead of inward.!! restlessness doesn't prove shallowness — it proves depth. [Isaiah 60:22](post.html?p=bible/isaiah_60-22.txt) * ("I will hasten it in its time") shares the same structure of waiting: a heart that finds no rest in finite things, awaiting a fulfillment it cannot bring about itself.
 * on time: the past no longer exists, the future doesn't exist yet, and the present vanishes the instant you notice it. Augustine's answer is that time is something the mind creates — past as memory, present as attention, future as expectation. !!He collapses the whole concept of time into subjective consciousness, sixteen centuries before Husserl and Bergson, anticipating the contemporary discussion of the eternal present!!. Edmund Husserl would later describe how consciousness stretches every present moment through retention of what just happened and anticipation of what's coming; Henri Bergson would argue that lived time is a continuous flow (duration), not the discrete ticking of a clock — both, like Augustine, locate time inside experience rather than outside it. the "eternal present" is the modern name for this same idea: that all we ever really have is now, and past and future exist only as forms the mind gives to it. memory, in turn, is not an archive but an immense palace where everything you've lived or become is still alive; Augustine admits He can walk through parts of His own memory He doesn't recognize — describing the unconscious 1500 years before Freud.
 * [Seneca's Letter 61](https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_61) ("it seems and will always seem that something is missing") and Augustine's cor inquietum diagnose the same anthropological structure — desire that never saturates — but prescribe opposite remedies. Seneca: stop wanting what you've always wanted, accept death as a limit, find tranquility through philosophy. Augustine: desire doesn't saturate in finite things because we are made for God — peace comes only in resting in Him. both are systems for treating restlessness: one heals by unlearning desire, the other by directing desire to its true object.
 * His broader legacy: He is the first great western thinker to make subjective experience the starting point of philosophy ("in interiore homine habitat veritas"). where Plato and Aristotle centered reason, Augustine put the will (voluntas) at the decisive center of the human soul. His doctrine of grace and original sin became the foundation of western catholic theology and fueled centuries of debate (Jansenism, the Protestant Reformation) — the same logic of grace runs through the Beatitudes, where God doesn't distribute according to merit. and by reconciling Plato and Plotinus with Christianity, He became the bridge that carried classical philosophy into the medieval world.
 
 ↳ connections
 ↳ verse: [Psalms 51:1-12](post.html?p=bible/psalms_51-1-12.txt) — create in me a clean heart
-↳ verse: [Isaiah 60:22](post.html?p=bible/isaiah_60-22.txt) — at the right time
+↳ verse: [Isaiah 60:22](post.html?p=bible/isaiah_60-22.txt) — at the right time *
 ↳ verse: [Isaiah 30:18](post.html?p=bible/isaiah_30-18.txt) — blessed are those who wait
-↳ verse: [Hebrews 11:1-3](post.html?p=bible/hebrews_11-1-3.txt) — evidence of what we cannot see
-↳ verse: [Colossians 1:27](post.html?p=bible/colossians_1-27.txt) — Christ lives in you
-↳ verse: [Psalms 34:17-19](post.html?p=bible/psalms_34-17-19.txt) — the Lord comes to the rescue
-↳ verse: [Psalms 14:3](post.html?p=bible/psalms_14-3.txt) — no one does good, not a single one
-↳ verse: [Romans 5:6-10](post.html?p=bible/romans_5-6-10.txt) — while we were still sinners
+↳ verse: [Hebrews 11:1-3](post.html?p=bible/hebrews_11-1-3.txt) — evidence of what we cannot see *
+↳ verse: [Colossians 1:27](post.html?p=bible/colossians_1-27.txt) — Christ lives in you *
+↳ verse: [Psalms 34:17-19](post.html?p=bible/psalms_34-17-19.txt) — the Lord comes to the rescue *
+↳ verse: [Psalms 14:3](post.html?p=bible/psalms_14-3.txt) — no one does good, not a single one *
+↳ verse: [Romans 5:6-10](post.html?p=bible/romans_5-6-10.txt) — while we were still sinners *
 ↳ verse: [1 John 3:19-20](post.html?p=bible/1-john_3-19-20.txt) — God is greater than our feelings
 ↳ verse: [1 Chronicles 16:11](post.html?p=bible/1-chronicles_16-11.txt) — continually seek Him
-↳ verse: [Romans 8:18-25](post.html?p=bible/romans_8-18-25.txt) — a foretaste of glory
-↳ verse: [Galatians 5:1-26](post.html?p=bible/galatians_5-1-26.txt) — we wait through the Spirit
+↳ verse: [Romans 8:18-25](post.html?p=bible/romans_8-18-25.txt) — a foretaste of glory *
+↳ verse: [Galatians 5:1-26](post.html?p=bible/galatians_5-1-26.txt) — we wait through the Spirit *
 ↳ verse: [Ecclesiastes 3:1-8](post.html?p=bible/ecclesiastes_3-1-8.txt) — for everything there is a season
 ↳ verse: [Psalms 86:11](post.html?p=bible/psalms_86-11.txt) — teach me your ways
 ↳ verse: [Romans 3:23](post.html?p=bible/romans_3-23.txt) — we all fall short
@@ -53,9 +54,9 @@ feast day: August 28
 ↳ verse: [Romans 5:1-3](post.html?p=bible/romans_5-1-3.txt) — because of our faith
 ↳ verse: [1 Timothy 2:5](post.html?p=bible/1-timothy_2-5.txt) — one Mediator
 ↳ verse: [Acts 4:12](post.html?p=bible/acts_4-12.txt) — no other name
-↳ verse: [Romans 13:14](post.html?p=bible/romans_13-14.txt) — clothe yourself with Christ
+↳ verse: [Romans 13:14](post.html?p=bible/romans_13-14.txt) — clothe yourself with Christ *
 ↳ verse: [2 Corinthians 12:9-10](post.html?p=bible/2-corinthians_12-9-10.txt) — My grace is all you need
-↳ verse: [Jeremiah 33:3](post.html?p=bible/jeremiah_33-3.txt) — remarkable secrets you do not know
+↳ verse: [Jeremiah 33:3](post.html?p=bible/jeremiah_33-3.txt) — remarkable secrets you do not know *
 ↳ verse: [Romans 7:14-25](post.html?p=bible/romans_7-14-25.txt) — the war within
 ↳ verse: [Ephesians 1:7](post.html?p=bible/ephesians_1-7.txt) — rich in kindness and grace
 ↳ prayer: [seek You, find You](post.html?p=prayers/seek-you-find-you.txt)

@@ -2,6 +2,7 @@ saint | Francis of Assisi
 ↳ [back to index](index.html)
 ↳ [back to archive](archive.html)
 ↳ [back to saints](saints.html)
+↳ en // [it](https://ivana-rep.github.io/soul-it/post.html?p=saints/francesco-d-assisi.txt)
 
 ↳ bio
 feast day: October 4
@@ -32,14 +33,14 @@ feast day: October 4
 
 ↳ connections
 ↳ verse: [Numbers 6:24-26](post.html?p=bible/numbers_6-24-26.txt) — the lord bless you and keep you
-↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own
+↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own *
 ↳ verse: [John 20:19](post.html?p=bible/john_20-19.txt) — Peace be with you
-↳ verse: [John 14:21-27](post.html?p=bible/john_14-21-27.txt) — peace as a gift
-↳ verse: [2 Thessalonians 3:16](post.html?p=bible/2-thessalonians_3-16.txt) — the Lord be with you
-↳ verse: [Matthew 5:1-48](post.html?p=bible/matthew_5-1-48.txt) — the Sermon on the Mount
+↳ verse: [John 14:21-27](post.html?p=bible/john_14-21-27.txt) — peace as a gift *
+↳ verse: [2 Thessalonians 3:16](post.html?p=bible/2-thessalonians_3-16.txt) — the Lord be with you *
+↳ verse: [Matthew 5:1-48](post.html?p=bible/matthew_5-1-48.txt) — the Sermon on the Mount *
 ↳ verse: [Psalms 40:3](post.html?p=bible/psalms_40-3.txt) — a new song to sing
 ↳ verse: [Psalms 113:3](post.html?p=bible/psalms_113-3.txt) — praise the Lord
-↳ verse: [Psalms 28:7](post.html?p=bible/psalms_28-7.txt) — my strength and shield
+↳ verse: [Psalms 28:7](post.html?p=bible/psalms_28-7.txt) — my strength and shield *
 ↳ prayer: [guard my heart](post.html?p=prayers/guard-my-heart.txt)
 ↳ prayer: [let my life be a song of praise](post.html?p=prayers/let-my-life-be-a-song-of-praise.txt)
 ↳ prayer: [thank God](post.html?p=prayers/thank-god.txt)
