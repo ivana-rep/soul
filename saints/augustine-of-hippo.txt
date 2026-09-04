@@ -73,6 +73,3 @@ feast day: August 28
 ↳ commonplace: [why did Jesus have to die for me to be forgiven](post.html?p=commonplace/why-did-jesus-have-to-die-for-me-to-be-forgiven.txt)
 ↳ commonplace: [if you're worried about going to hell](commonplace/if-youre-worried-about-going-to-hell.html)
 ↳ commonplace: [finding Jesus won't magically fix you](post.html?p=commonplace/finding-jesus-wont-magically-fix-you.txt)
-↳ thought capsule | [2026-06-13](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260613.txt) | To inhabit
-↳ thought capsule | [2026-06-09](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260609.txt) | Enough
-↳ thought capsule | [2026-06-02](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260602.txt) | Discovery
