@@ -43,5 +43,3 @@ feast day: June 13
 ↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own *
 ↳ verse: [Romans 8:18-28](post.html?p=bible/romans_8-18-28.txt) — everything happens for a reason *
 ↳ verse: [Proverbs 18:21](post.html?p=bible/proverbs_18-21.txt) — the tongue can bring death or life *
-↳ thought capsule | [2026-07-15](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260715.txt) | In the doing
-↳ thought capsule | [2026-07-13](https://ivana-rep.github.io/thoughtcapsules/post.html?p=2026/20260713.txt) | From the inside
