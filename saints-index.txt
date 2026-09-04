@@ -55,6 +55,6 @@ capsules: —
 pio-of-pietrelcina | Pio of Pietrelcina | feast: September 23
 themes: stigmata, suffering endured without self-defense, decades under ecclesiastical suspicion, mysticism alongside institution-building (Prayer Groups, Casa Sollievo della Sofferenza), family / San Marco la Catola pilgrimage roots, legacy, pray hope don't worry
 verses: 2 Corinthians 12:9-10 (My grace is all you need) | James 1:2-4 (let it grow) | Psalms 73:21-26 (the strength of my heart) | 1 Peter 2:24 (by his wounds you are healed) | Matthew 6:34 (today's trouble is enough)
-prayers: suffer willingly for You
+prayers: suffer willingly for You | turn my worries into worship
 commonplace: the reason i'm still standing
 capsules: —
