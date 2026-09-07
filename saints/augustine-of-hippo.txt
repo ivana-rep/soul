@@ -74,3 +74,4 @@ feast day: August 28
 ↳ commonplace: [if you're worried about going to hell](commonplace/if-youre-worried-about-going-to-hell.html)
 ↳ commonplace: [finding Jesus won't magically fix you](post.html?p=commonplace/finding-jesus-wont-magically-fix-you.txt)
 ↳ commonplace: [cast your numbness on Him](post.html?p=commonplace/cast-your-numbness-on-him.txt)
+↳ commonplace: [three lies about christianity](post.html?p=commonplace/three-lies-about-christianity.txt)

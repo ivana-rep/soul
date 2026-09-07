@@ -30,5 +30,8 @@ c. AD 405 | St. Jerome's Vulgate renders Joseph's response to Mary's pregnancy w
 ↳ verse: [Luke 6:36](post.html?p=bible/luke_6-36.txt) — be compassionate
 ↳ verse: [Romans 12:21](post.html?p=bible/romans_12-21.txt) — conquer evil with good
 ↳ verse: [Matthew 5:1-48](post.html?p=bible/matthew_5-1-48.txt) — the Sermon on the Mount *
+↳ verse: [Luke 6:28](post.html?p=bible/luke_6-28.txt) — praying for those who hurt you
+↳ verse: [Matthew 18:15](post.html?p=bible/matthew_18-15.txt) — go to them privately
+↳ commonplace: [forgiveness isn't reconciliation](post.html?p=commonplace/forgiveness-isnt-reconciliation.txt)
 ↳ prayer: [love people like You love people](post.html?p=prayers/love-people-like-you-love-people.txt)
 ↳ prayer: [choosing to forgive](post.html?p=prayers/choosing-to-forgive.txt)
