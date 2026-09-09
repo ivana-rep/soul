@@ -21,6 +21,15 @@ feast day: October 4
 \ most High, all-powerful, good Lord, all praise is Yours, all glory, all honor, and all blessing.
 ~ — Canticle of the Creatures
 
+\ so sublime is the love of God, that it should be named only rarely, and in case of great need.
+~ — franciscan breviary, September 2
+
+---
+
+a beautiful lesson, less about humility than about realism. for those of us who invoke the love of God at every turn, seasoning every sentence and every action with it, perhaps because doing so makes us feel even more devout. but, while it's undeniable that divine love pervades everything, it would be more honest to admit that much of what we do is really for our own advantage, while other times it should simply be done out of justice.
+
+---
+
 ↳ what resonates with me
 * my own devotion to Francis and to others in His order, like [St. Anthony of Padua](post.html?p=saints/anthony-of-padua.txt), points to a kind of spirituality many people follow without even knowing it. it's not necessarily religious — it's simplicity, minimalism, care for the environment, sometimes it's even stoicism.
 * if He were alive today, Francis would have the same concerns: harmony with creation, peace, refusal to accumulate — not as asceticism but as freedom for the essential.
@@ -32,6 +41,7 @@ feast day: October 4
 * His broader legacy: the Order of Friars Minor and the Poor Clares still exist as living communities eight centuries later; the Nativity scene He improvised at Greccio in 1223 became a tradition still set up every December; even the Canticle of the Creatures, composed nearly blind near the end of His life, stands as the first poem in the Italian vernacular — !!a founder of religious orders and, almost by accident, of Italian literature!!. few figures leave that wide a footprint without ever writing a theological treatise.
 
 ↳ connections
+↳ verse: [Mark 10:17-29](post.html?p=bible/mark_10-17-29.txt) — everything is possible with God *
 ↳ verse: [Numbers 6:24-26](post.html?p=bible/numbers_6-24-26.txt) — the lord bless you and keep you
 ↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own *
 ↳ verse: [John 20:19](post.html?p=bible/john_20-19.txt) — Peace be with you
@@ -45,3 +55,5 @@ feast day: October 4
 ↳ prayer: [let my life be a song of praise](post.html?p=prayers/let-my-life-be-a-song-of-praise.txt)
 ↳ prayer: [thank God](post.html?p=prayers/thank-god.txt)
 ↳ prayer: [i will praise You](post.html?p=prayers/i-will-praise-you.txt)
+↳ commonplace: [difference between gentle and humble](post.html?p=commonplace/difference-between-gentle-and-humble.txt)
+↳ commonplace: [content with what God disposes](post.html?p=commonplace/content-with-what-god-disposes.txt)
