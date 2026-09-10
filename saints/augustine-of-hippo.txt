@@ -36,7 +36,7 @@ feast day: August 28
 
 ↳ connections
 ↳ commonplace: [made to hold Him](post.html?p=commonplace/made-to-hold-him.txt)
-↳ verse: [John 13:7](post.html?p=bible/john_13-7.txt) — you don't understand now
+↳ verse: [John 13:4-15](post.html?p=bible/john_13-4-15.txt) — Jesus served His disciples by washing their feet
 ↳ verse: [Psalms 51:1-12](post.html?p=bible/psalms_51-1-12.txt) — create in me a clean heart
 ↳ verse: [Isaiah 60:22](post.html?p=bible/isaiah_60-22.txt) — at the right time *
 ↳ verse: [Isaiah 30:18](post.html?p=bible/isaiah_30-18.txt) — blessed are those who wait
@@ -45,12 +45,12 @@ feast day: August 28
 ↳ verse: [Colossians 1:27](post.html?p=bible/colossians_1-27.txt) — Christ lives in you *
 ↳ verse: [Psalms 34:17-20](post.html?p=bible/psalms_34-17-20.txt) — the Lord comes to the rescue *
 ↳ verse: [Psalms 14:3](post.html?p=bible/psalms_14-3.txt) — no one does good, not a single one *
-↳ verse: [Romans 5:6-10](post.html?p=bible/romans_5-6-10.txt) — while we were still sinners *
-↳ verse: [1 John 3:19-20](post.html?p=bible/1-john_3-19-20.txt) — God is greater than our feelings
+↳ verse: [Romans 5:6-11](post.html?p=bible/romans_5-6-11.txt) — while we were still sinners *
+↳ verse: [1 John 3:19-20](post.html?p=bible/1-john_3-19-20.txt) — our actions demonstrate whether we are living in truth
 ↳ verse: [1 Chronicles 16:11](post.html?p=bible/1-chronicles_16-11.txt) — continually seek Him
 ↳ verse: [Romans 8:18-28](post.html?p=bible/romans_8-18-28.txt) — everything happens for a reason *
 ↳ verse: [Galatians 5:1-26](post.html?p=bible/galatians_5-1-26.txt) — we wait through the Spirit *
-↳ verse: [Ecclesiastes 3:1-8](post.html?p=bible/ecclesiastes_3-1-8.txt) — for everything there is a season
+↳ verse: [Ecclesiastes 3:1-8](post.html?p=bible/ecclesiastes_3-1-8.txt) — there is a time for everything
 ↳ verse: [Psalms 86:11](post.html?p=bible/psalms_86-11.txt) — teach me your ways
 ↳ verse: [Romans 3:23](post.html?p=bible/romans_3-23.txt) — we all fall short
 ↳ verse: [Romans 6:23](post.html?p=bible/romans_6-23.txt) — the free gift of God

@@ -45,5 +45,5 @@ feast day: June 13
 ↳ connections
 ↳ verse: [Luke 12:15](post.html?p=bible/luke_12-15.txt) — life is not what you own *
 ↳ verse: [Romans 8:18-28](post.html?p=bible/romans_8-18-28.txt) — everything happens for a reason *
-↳ verse: [Proverbs 18:21](post.html?p=bible/proverbs_18-21.txt) — the tongue can bring death or life *
+↳ verse: [Proverbs 18:21](post.html?p=bible/proverbs_18-21.txt) — too much talk can have negative consequences *
 ↳ commonplace: [content with what God disposes](post.html?p=commonplace/content-with-what-god-disposes.txt)
