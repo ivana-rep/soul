@@ -80,7 +80,7 @@ that changes everything, changes the tone of every conversation, changes your po
 
 ---
 
-~ ↳ see other verses on the same topic > [wisdom & humility](archive.html#wisdom-humility-verses)
+~ ↳ see other verses on the same topic > [love](archive.html#love-verses)
 
 ~ ↳ see saint connection >
 ~ [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt)
@@ -88,7 +88,6 @@ that changes everything, changes the tone of every conversation, changes your po
 
 ~ ↳ related verses >
 ~ [John 13:34](post.html?p=bible/john_13-34.txt) | love each other *
-~ [Romans 12:19](post.html?p=bible/romans_12-19.txt) | never take revenge *
-~ [Romans 12:21](post.html?p=bible/romans_12-21.txt) | conquer evil with good
+~ [Romans 12:19-21](post.html?p=bible/romans_12-19-21.txt) | never take revenge, conquer evil with good *
 
 > read [another](post.html?p=bible/john_11-25-30.txt) one
