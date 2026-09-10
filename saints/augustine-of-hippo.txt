@@ -36,6 +36,7 @@ feast day: August 28
 
 ↳ connections
 ↳ commonplace: [made to hold Him](post.html?p=commonplace/made-to-hold-him.txt)
+↳ verse: [John 13:7](post.html?p=bible/john_13-7.txt) — you don't understand now
 ↳ verse: [Psalms 51:1-12](post.html?p=bible/psalms_51-1-12.txt) — create in me a clean heart
 ↳ verse: [Isaiah 60:22](post.html?p=bible/isaiah_60-22.txt) — at the right time *
 ↳ verse: [Isaiah 30:18](post.html?p=bible/isaiah_30-18.txt) — blessed are those who wait
