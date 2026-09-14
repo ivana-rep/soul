@@ -31,7 +31,7 @@ capsules: 2026-06-13 To inhabit | 2026-06-09 Enough | 2026-06-02 Discovery
 
 clare-of-assisi | Clare of Assisi | feast: August 11
 themes: poverty / Privilege of Poverty, stillness as courage (siege of San Damiano), mentorship through letters (Agnes of Prague), contemplation / mirror imagery, legacy
-verses: Luke 12:15 (life is not what you own) | John 15:1-13 (remain in Me) | Psalms 91:10-11 (He will order His angels to protect you) | Isaiah 54:17 (no weapon will succeed) | Philippians 4:19 (He will supply all your needs) | Psalms 118:11 (i destroyed them all) | Psalms 46:10 (be still and know that I am God)
+verses: Luke 12:15 (life is not what you own) | John 15:1-27 (remain in Me) | Psalms 91:10-11 (He will order His angels to protect you) | Isaiah 54:17 (no weapon will succeed) | Philippians 4:19 (He will supply all your needs) | Psalms 118:11 (i destroyed them all) | Psalms 46:10 (be still and know that I am God)
 prayers: guard my heart
 capsules: —
 
@@ -57,7 +57,7 @@ capsules: —
 
 pio-of-pietrelcina | Pio of Pietrelcina | feast: September 23
 themes: stigmata, suffering endured without self-defense, decades under ecclesiastical suspicion, mysticism alongside institution-building (Prayer Groups, Casa Sollievo della Sofferenza), family / San Marco la Catola pilgrimage roots, legacy, pray hope don't worry
-verses: Psalms 42:5-6 (i will put my hope in God) | 2 Corinthians 12:9-10 (My grace is all you need) | James 1:2-4 (let it grow) | Psalms 73:21-26 (the strength of my heart) | 1 Peter 2:24 (by his wounds you are healed) | Matthew 6:19-34 (seek first the kingdom) | Romans 12:12 (be patient in trouble)
+verses: Psalms 42:5-6 (i will put my hope in God) | 2 Corinthians 12:9-10 (My grace is all you need) | James 1:2-4 (let it grow) | Psalms 73:21-26 (the strength of my heart) | 1 Peter 2:24 (by his wounds you are healed) | Matthew 6:19-34 (seek first the kingdom) | Romans 12:12 (be patient in trouble) | 1 Peter 5:7 (give your worries to Him)
 prayers: suffer willingly for You | turn my worries into worship | the most powerful prayer
 commonplace: the reason i'm still standing
 capsules: —
