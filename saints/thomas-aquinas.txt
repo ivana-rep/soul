@@ -1,0 +1,44 @@
+saint | Thomas Aquinas
+↳ [back to index](index.html)
+↳ [back to archive](archive.html)
+↳ [back to saints](saints.html)
+↳ en // [it](https://ivana-rep.github.io/soul-it/post.html?p=saints/tommaso-d-aquino.txt)
+
+↳ bio
+feast day: January 28 (March 7 in the traditional calendar — His date of death)
+c. 1225 | born in Roccasecca, near Aquino, in the Kingdom of Sicily
+c. 1244 | enters the Dominican order against His family's fierce opposition — held captive by them for about a year in an attempt to change His mind
+1248 | studies under Albert the Great at the Dominican studium in Cologne
+c. 1250 | ordained a priest in Cologne
+1252 | sent to Paris to pursue an advanced degree in theology
+1256-1259 | holds the Dominican chair of theology at the University of Paris
+1259-1265 | writes the Summa Contra Gentiles in Orvieto and Rome, a work defending the faith through reason for a non-Christian audience
+1265 | begins the Summa Theologiae while teaching in Rome, His major synthesis of faith and reason
+1268-1272 | returns to Paris for a second regency, defending Aristotelian thought against both secular and religious critics
+December 1273 | stops writing the Summa Theologiae after a mystical experience during Mass, saying "all that I have written seems like straw" — leaves it unfinished
+March 7, 1274 | dies at the Cistercian abbey of Fossanova, near Terracina, traveling to the Second Council of Lyon
+1323 | canonized by Pope John XXII
+1567 | declared a Doctor of the Church by Pope Pius V, titled Doctor Angelicus
+1879 | Pope Leo XIII's encyclical Aeterni Patris establishes His thought as the model for Catholic philosophy and theology
+1880 | declared patron of all Catholic schools, colleges, and universities
+
+↳ quotes
+\ we cannot know what God is, but rather what He is not.
+~ — Summa Theologiae, I, q.3, prologue
+
+\ to love is to will the good of another.
+~ — Summa Theologiae
+
+\ beauty requires three things: wholeness, harmony, and radiance.
+~ — Summa Theologiae, I, q.39, a.8
+
+↳ what resonates with me
+* like [Augustine](post.html?p=saints/augustine-of-hippo.txt), Aquinas spent a life trying to say something true about a God who exceeds every true thing that can be said about Him — eight centuries later, still asking the same question, building a different kind of answer.
+* the opening move of the Summa's treatise on God is a refusal: "we cannot know what God is, but rather what He is not." Aquinas builds an entire doctrine of God by subtraction — not a body, not composed of parts, not limited by place or time — until what's left standing is a shape rather than a description. it's the same instinct Augustine names directly, "if you comprehend it, it is not God." !!certainty about God is usually the sign you've stopped describing God and started describing an idol small enough to fit in your head!!.
+* when Moses asks God's name, the answer is "[I AM WHO I AM](post.html?p=bible/exodus_3-14.txt)" — not a name in the usual sense, a name that just states existence itself. Aquinas builds His whole doctrine of God on that one line: God isn't a being among beings, competing for space with everything else that exists, God is the act of existing itself, the reason anything is there to be counted at all. it reframes the question people still ask today ("does God exist?") as a category error — existence isn't a property God happens to have, it's what the word God means.
+* "to love is to will the good of another" collapses a distinction the modern world works hard to keep blurred: love as a feeling that happens to you, or love as an act you choose to make happen for someone else. Aquinas's definition leaves no room for love that stays comfortable — another person's flourishing, not your own emotional state, is the measure. it's the same reorientation behind the commandment to love your neighbor as yourself: named an act of will, not a mood you either have or don't.
+* His definition of beauty — wholeness, harmony, radiance — reads like an aesthetics textbook until you notice it's really a description of coherence: a thing is beautiful when nothing in it is missing, nothing fights against anything else, and what it is shows through clearly. the same three tests work on a life, a piece of music, an argument, not just a painting.
+* His broader legacy: six centuries after His canonization, Leo XIII's Aeterni Patris made His thought the standard curriculum of Catholic philosophy and theology, and it still is — every seminary and Catholic university teaching philosophy of religion today is, in some measure, still working inside the synthesis of faith and reason Aquinas built by putting Aristotle and Christian theology in the same room and refusing to let either one leave.
+
+↳ connections
+↳ verse: [Exodus 3:14](post.html?p=bible/exodus_3-14.txt) — I AM who I AM
