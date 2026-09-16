@@ -126,6 +126,9 @@ digital devotional journal
 ↳ search: <input type="text" id="search-input" placeholder="keyword" autocomplete="off" spellcheck="false"> <span class="counter" id="search-status"></span> <span class="counter" id="search-clear" style="display:none">// <a href="#" id="search-clear-link">clear results</a></span>
 <span id="search-results"></span>
 
+↳ search by meaning: <input type="text" id="semantic-input" placeholder="e.g. jesus explaining how to pray" autocomplete="off" spellcheck="false"> <span class="counter" id="semantic-status"></span> <span class="counter" id="semantic-clear" style="display:none">// <a href="#" id="semantic-clear-link">clear results</a></span>
+<span id="semantic-results"></span>
+
 ↳ contact: <a href="https://t.me/ivana_tg">telegram @ivana_tg</a>
 ↳ other projects: <a href="https://ivana-rep.github.io/thoughtcapsules/">thought capsules</a>
 </pre>
@@ -261,6 +264,215 @@ digital devotional journal
     results.innerHTML = "";
     clearWrap.style.display = "none";
     input.focus();
+  });
+
+  // --- search by meaning (semantic search) ---
+  const semInput = document.getElementById("semantic-input");
+  const semStatus = document.getElementById("semantic-status");
+  const semResults = document.getElementById("semantic-results");
+  const semClearWrap = document.getElementById("semantic-clear");
+  const semClearLink = document.getElementById("semantic-clear-link");
+
+  const EMBED_MODEL = "Xenova/all-MiniLM-L6-v2";
+  const EMBED_CACHE_KEY = "soul-semantic-v2";
+  const MIN_SCORE = 0.3;
+  const EMBED_TEXT_LIMIT = 800;
+
+  let semWorker = null;
+  let semMsgId = 0;
+  const semPending = new Map();
+  let semTimer = null;
+
+  // runs off the main thread so the page stays responsive during the one-time indexing pass
+  function getWorker() {
+    if (semWorker) return semWorker;
+
+    const src = `
+import { pipeline } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.0";
+let extractorPromise = null;
+self.onmessage = async (e) => {
+  const { id, model, texts } = e.data;
+  try {
+    if (!extractorPromise) {
+      extractorPromise = pipeline("feature-extraction", model, {
+        dtype: "q8",
+        progress_callback: p => {
+          if (p.status === "progress") self.postMessage({ id: "load", progress: p.progress || 0 });
+        }
+      });
+    }
+    const extractor = await extractorPromise;
+    const BATCH = 8;
+    const vecs = [];
+    for (let i = 0; i < texts.length; i += BATCH) {
+      const chunk = texts.slice(i, i + BATCH);
+      const output = await extractor(chunk, { pooling: "mean", normalize: true });
+      const width = output.dims[output.dims.length - 1];
+      for (let j = 0; j < chunk.length; j++) {
+        vecs.push(Array.from(output.data.slice(j * width, (j + 1) * width)));
+      }
+      self.postMessage({ id, progress: Math.min(i + BATCH, texts.length), total: texts.length });
+    }
+    self.postMessage({ id, done: true, vecs });
+  } catch (err) {
+    self.postMessage({ id, error: String(err) });
+  }
+};
+`;
+    const blob = new Blob([src], { type: "application/javascript" });
+    semWorker = new Worker(URL.createObjectURL(blob), { type: "module" });
+    semWorker.onmessage = e => {
+      const { id } = e.data;
+      if (id === "load") {
+        semStatus.textContent = `downloading model… ${Math.round(e.data.progress)}%`;
+        return;
+      }
+      const p = semPending.get(id);
+      if (!p) return;
+      if (e.data.error) {
+        p.reject(new Error(e.data.error));
+        semPending.delete(id);
+        return;
+      }
+      if (e.data.done) {
+        p.resolve(e.data.vecs);
+        semPending.delete(id);
+        return;
+      }
+      if (p.onProgress) p.onProgress(e.data.progress, e.data.total);
+    };
+    return semWorker;
+  }
+
+  function workerEmbed(texts, onProgress) {
+    const w = getWorker();
+    const id = ++semMsgId;
+    return new Promise((resolve, reject) => {
+      semPending.set(id, { resolve, reject, onProgress });
+      w.postMessage({ id, model: EMBED_MODEL, texts });
+    });
+  }
+
+  function cleanText(raw) {
+    return raw
+      .split("\n")
+      .filter(line => !line.startsWith("~") && !line.startsWith(">"))
+      .join(" ")
+      .replace(/!!(.*?)!!/g, "$1")
+      .replace(/\\\s?/g, "")
+      .replace(/\[(\d+)\]/g, "")
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function cosine(a, b) {
+    let dot = 0;
+    for (let i = 0; i < a.length; i++) dot += a[i] * b[i];
+    return dot; // both vectors are L2-normalized, so dot product == cosine similarity
+  }
+
+  function corpusFingerprint(entries) {
+    let len = 0;
+    for (const e of entries) len += e.text.length;
+    return `${entries.length}:${len}`;
+  }
+
+  async function getCorpusVectors(entries) {
+    const fp = corpusFingerprint(entries);
+
+    try {
+      const cached = JSON.parse(localStorage.getItem(EMBED_CACHE_KEY) || "null");
+      if (cached && cached.model === EMBED_MODEL && cached.fingerprint === fp) {
+        return new Map(cached.vecs.map(v => [v.path, v.vec]));
+      }
+    } catch (e) {}
+
+    const clean = entries.map(e => cleanText(e.text).slice(0, EMBED_TEXT_LIMIT));
+    const vecs = await workerEmbed(clean, (done, total) => {
+      semStatus.textContent = `indexing… ${done}/${total}`;
+    });
+
+    const map = new Map();
+    const toCache = [];
+    entries.forEach((e, i) => {
+      map.set(e.path, vecs[i]);
+      toCache.push({ path: e.path, vec: vecs[i] });
+    });
+
+    try {
+      localStorage.setItem(EMBED_CACHE_KEY, JSON.stringify({ model: EMBED_MODEL, fingerprint: fp, vecs: toCache }));
+    } catch (e) {}
+
+    return map;
+  }
+
+  function semSnippet(text) {
+    const clean = escapeHTML(cleanText(text));
+    return clean.length > 160 ? clean.slice(0, 160).trim() + "…" : clean;
+  }
+
+  async function semanticSearch(query) {
+    const entries = await buildIndex();
+    semStatus.textContent = "loading model… (one-time, ~23MB)";
+
+    const vectorMap = await getCorpusVectors(entries);
+
+    semStatus.textContent = "searching…";
+    const qVecs = await workerEmbed([cleanText(query)]);
+    const qVec = qVecs[0];
+
+    const scored = entries
+      .filter(e => vectorMap.has(e.path))
+      .map(e => ({ e, score: cosine(qVec, vectorMap.get(e.path)) }))
+      .filter(x => x.score > MIN_SCORE)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+
+    if (scored.length === 0) {
+      semStatus.textContent = "no results";
+      semResults.innerHTML = "";
+      return;
+    }
+
+    semStatus.textContent = scored.length + " result" + (scored.length === 1 ? "" : "s");
+
+    semResults.innerHTML = scored
+      .map(({ e }) => {
+        const line1 = `↳ <a href="post.html?p=${e.path}">${escapeHTML(e.title)}</a><span class="counter"> // ${typeLabel(e.path)}</span>`;
+        const line2 = `<span class="counter">   ${semSnippet(e.text)}</span>`;
+        return line1 + "\n" + line2;
+      })
+      .join("\n\n") + "\n";
+  }
+
+  semInput.addEventListener("input", () => {
+    clearTimeout(semTimer);
+    const query = semInput.value.trim();
+
+    if (query.length < 3) {
+      semStatus.textContent = "";
+      semResults.innerHTML = "";
+      semClearWrap.style.display = "none";
+      return;
+    }
+
+    semStatus.textContent = "…";
+    semClearWrap.style.display = "";
+    semTimer = setTimeout(() => {
+      semanticSearch(query).catch(() => {
+        semStatus.textContent = "search unavailable";
+      });
+    }, 600);
+  });
+
+  semClearLink.addEventListener("click", e => {
+    e.preventDefault();
+    semInput.value = "";
+    semStatus.textContent = "";
+    semResults.innerHTML = "";
+    semClearWrap.style.display = "none";
+    semInput.focus();
   });
 })();
 </script>
