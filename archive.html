@@ -1205,5 +1205,25 @@
 
 <span class="counter">// <a href="index.html#search-input">search all archives by keyword</a></span>
 </pre>
+<script>
+  (function () {
+    // re-apply the fragment jump: mobile browsers can lose it to a bfcache
+    // scroll restore or to reflow of this very long pre-wrap page
+    var userScrolled = false;
+    addEventListener("wheel", function () { userScrolled = true; }, { passive: true });
+    addEventListener("touchmove", function () { userScrolled = true; }, { passive: true });
+
+    function jump(force) {
+      if (!location.hash) return;
+      if (userScrolled && !force) return;
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) el.scrollIntoView();
+    }
+
+    addEventListener("load", function () { jump(false); setTimeout(function () { jump(false); }, 200); });
+    addEventListener("pageshow", function (e) { if (e.persisted) jump(true); });
+    addEventListener("hashchange", function () { jump(true); });
+  })();
+</script>
   </body>
 </html>
