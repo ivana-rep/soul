@@ -130,7 +130,7 @@
       // verse number + highlight + link processing, shared by normal and blockquote lines
       function processLine(line) {
         let processed = escapeHTML(line)
-          .replace(/\[(\d+)\]\s?/g, '<span class="counter">$1</span> ');
+          .replace(/\[(\d+)\]\s?/g, '<span class="counter" id="v$1">$1</span> ');
 
         const segments = processed.split("!!");
         processed = segments[0];
@@ -183,6 +183,13 @@
       flushQuote();
 
       content.innerHTML = out.join("\n"); // PRESERVE EMPTY LINES
+
+      // single-verse anchor: post.html?p=bible/x.txt#v5 → jump to [5]
+      // (content is fetched, so the browser's native hash jump fires too early)
+      if (location.hash) {
+        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (target) target.scrollIntoView();
+      }
     })
     .catch(() => {
       content.textContent = "Error loading file.";
