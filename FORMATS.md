@@ -37,6 +37,35 @@ Mark every verse number with `[N]` — `post.html` renders this as a small gray 
 
 The source line is optional, and — unlike every other cross-reference line below — sits right after the verse text, before the reflection block. The `---` + reflection + `---` block is optional: if there's no reflection, neither separator appears, no extra section. Every line from immediately after the closing `---` (or immediately after the verse text, if there's no reflection) onward is counter-styled (`~` prefix), with one exception: `read another one` always stays a plain, prominent link, never counter-styled — everything else is counter-styled. The topic cross-link line is mandatory. The saint-connection line is optional — only when a saint's page genuinely links to this verse (see "Saints" workflow below) — and mirrors that link back; one line per saint if more than one connects. The `related verses` block is optional: a hand-picked, selective set of specific other verses that genuinely say something closely related — never the whole topic (that's what the topic cross-link is for) — one `~ [Ref](url) | title` line per verse, reference linked (never the title), no blank line between the header and the list or between list lines. The `read another one` line is mandatory and is always the file's last line. Whenever a reflection clearly mentions or quotes another verse already on the site, link it inline right where it's mentioned — and also add it to the `related verses` block if it isn't there already. The inline link never substitutes for the cross-reference entry; both go together.
 
+#### Gospel parallels (one file per episode/teaching)
+
+An episode or teaching of Jesus reported by more than one gospel (e.g. calming the storm, take up your cross, the rich young man) lives in **one single file** carrying every gospel's version — never one file per gospel. Applies to narrated events and to sayings/teachings alike, and includes every parallel, even those not yet on the site. Longer discourses that only partially overlap (Sermon on the Mount / Sermon on the Plain) stay separate entries, linked via `related verses`.
+
+- **File name / first line**: the first gospel in canonical order (Matthew → Mark → Luke → John) is the primary: `bible/matthew_8-23-27.txt`, `Matthew 8:23-27 | title`.
+- **Structure**: primary text as usual, then an `→ also in` line (IT: `→ presente anche in`), then each other version as a plain reference line followed by its full verbatim text, in canonical order, blank line between versions. The block sits right after the primary text, before the source line / reflection / footer:
+```
+[23] primary text...
+
+→ also in
+
+Mark 4:35-41
+[35] ...
+
+Luke 8:22-25
+[22] ...
+
+~ ↳ source: [name](url)
+
+---
+reflection
+---
+
+~ ↳ see other verses on the same topic > ...
+```
+- **Topics / saints / related**: the union across all versions (the DB lookup covers every range).
+- **archive.html**: one line in each gospel's author/book section (with that gospel's own chapter:verse range), all pointing to the single file; one line per topic section and one line in `all-verses-archive.html`, under the primary reference.
+- When a new entry turns out to be a parallel of an existing one, never create a second file — fold it into the existing one (renaming it if the new gospel comes first canonically).
+
 ### Prayer (prayers/{title-slug}.txt)
 First line: `topic | title` — topic lowercase (common noun, not a proper name).
 ```
