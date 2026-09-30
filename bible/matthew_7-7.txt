@@ -11,4 +11,7 @@ keep on knocking, and !!the door will be opened to you!!.
 
 ~ ↳ see all prayers > [all prayers](all-prayers-archive.html)
 
-> read [another](post.html?p=bible/matthew_4-4.txt) one
+~ ↳ related verses >
+~ [Matthew 5:1-7:29](post.html?p=bible/matthew_5-1-7-29.txt) | the Sermon on the Mount *
+
+> read [another](post.html?p=bible/matthew_4-1-25.txt) one
