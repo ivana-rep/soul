@@ -28,7 +28,7 @@ c. AD 405 | St. Jerome's Vulgate renders Joseph's response to Mary's pregnancy w
 ↳ verse: [Romans 12:19-21](post.html?p=bible/romans_12-19-21.txt) — never take revenge, conquer evil with good *
 ↳ verse: [Mark 11:23-25](post.html?p=bible/mark_11-23-25.txt) — we can experience God's power through faith
 ↳ verse: [Luke 6:17-49](post.html?p=bible/luke_6-17-49.txt) — the Sermon on the Plain *
-↳ verse: [Matthew 5:1-48](post.html?p=bible/matthew_5-1-48.txt) — the Sermon on the Mount *
+↳ verse: [Matthew 5:1-7:29](post.html?p=bible/matthew_5-1-7-29.txt) — the Sermon on the Mount *
 ↳ verse: [Matthew 18:15](post.html?p=bible/matthew_18-15.txt) — go to them privately
 ↳ verse: [Matthew 9:9-13](post.html?p=bible/matthew_9-9-13.txt) — sick people need a doctor
 ↳ commonplace: [forgiveness isn't reconciliation](post.html?p=commonplace/forgiveness-isnt-reconciliation.txt)
