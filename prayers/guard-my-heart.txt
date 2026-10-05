@@ -15,6 +15,9 @@ amen.
 ~ [Francis of Assisi](post.html?p=saints/francis-of-assisi.txt)
 ~ [Clare of Assisi](post.html?p=saints/clare-of-assisi.txt)
 
+~ ↳ related prayers >
+~ [make room for what You have prepared](post.html?p=prayers/make-room-for-what-you-have-prepared.txt)
+
 ~ ↳ related verses >
 ~ [Matthew 5:1-7:29](post.html?p=bible/matthew_5-1-7-29.txt) | the Sermon on the Mount *
 ~ [Matthew 6:1-18](post.html?p=bible/matthew_6-1-18.txt) | the lord's prayer *
