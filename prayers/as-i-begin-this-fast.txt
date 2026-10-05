@@ -13,7 +13,6 @@ amen.
 ~ ↳ see other prayers on the same topic > [fasting](archive.html#fasting-prayers)
 
 ~ ↳ related prayers >
-~ [help me practice this discipline](post.html?p=prayers/help-me-practice-this-discipline.txt)
 ~ [when the hunger comes](post.html?p=prayers/when-the-hunger-comes.txt)
 ~ [breaking the fast](post.html?p=prayers/breaking-the-fast.txt)
 
@@ -27,4 +26,4 @@ amen.
 ~ [1 Thessalonians 5:16-18](post.html?p=bible/1-thessalonians_5-16-18.txt) | always be joyful
 ~ [Colossians 4:2](post.html?p=bible/colossians_4-2.txt) | devote yourself to prayer
 
-> read [another](post.html?p=prayers/help-me-practice-this-discipline.txt) one
+> read [another](post.html?p=prayers/evening-prayer.txt) one
