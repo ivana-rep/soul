@@ -43,7 +43,8 @@ all-verses-archive.html       flat list of every verse, newest first (drives the
 all-commonplace-archive.html  flat list of every commonplace entry, newest first (drives its own loop)
 saints.html                   list of every saint, linking to their individual page
 saints-index.txt              internal-only lookup index of saint connections (see below)
-soulfavicon.png
+soulfavicon.png / soulfavicon_dark.png   favicon light/dark (S, editorial style)
+apple-touch-icon.png          iOS Home icon (180×180)
 
 bible/          {book}_{chapter}-{verse}.txt         e.g. isaiah_60-22.txt
 prayers/        {title-slug}.txt                     e.g. you-are-all-i-need.txt
