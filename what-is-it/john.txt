@@ -3,4 +3,13 @@ John | what is it
 ↳ [back to archive](archive.html)
 ↳ en // [it](https://ivana-rep.github.io/soul-it/post.html?p=what-is-it/john.txt)
 
-the fourth Gospel, traditionally written by the apostle John, one of Jesus's inner circle of three closest disciples. distinct in tone from the other three. fewer parables, more of Jesus' own words about who He is. written, in the author's words, so that readers might believe.
+the fourth gospel, traditionally attributed to the apostle John, one of Jesus' three closest disciples, who never names himself in the book, but appears in it as "the disciple whom Jesus loved". many scholars date it to the end of the first century, and an early tradition places its writing in Ephesus. it says plainly why it was written: so that its readers may believe that Jesus is the Messiah, the Son of God, and by believing have life in His name.
+
+it opens with a prologue unlike any other gospel — "in the beginning the Word already existed" — in chapter 1. chapters 1–12 are often called the book of signs: seven miracles, from water turned into wine at Cana to the raising of Lazarus, each one pointing beyond itself to who Jesus is, alongside His "I am" sayings — the bread of life, the light of the world, the good shepherd, the resurrection and the life. chapters 13–20 are the book of glory: the last supper, with the washing of the feet and Jesus' long farewell to His disciples, then the cross and the resurrection. chapter 21 is an epilogue by the sea of Galilee.
+
+fewer parables, fewer miracles, longer conversations: it is the most reflective of the four, written so that the reader doesn't just know what Jesus did, but who He is.
+
+~ ↳ if you read only a little of this book, read this >
+~ [John 3:16-21](post.html?p=bible/john_3-16-21.txt) | God so loved the world
+~ [John 1:1-5](post.html?p=bible/john_1-1-5.txt) | the light shines in the darkness
+~ [John 14:6](post.html?p=bible/john_14-6.txt) | I am the way
