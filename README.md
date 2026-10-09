@@ -1,6 +1,6 @@
 # soul
 
-A personal, static devotional site — bible verses, prayers, saint biographies, and short "commonplace" quotes, each with a short reflection. Built as plain HTML + `.txt` content files, no build step, no framework, no database. Live at:
+A personal, static devotional site — bible verses, prayers, saint biographies, and short "commonplace" quotes, some with a short personal reflection. Its Italian sibling, [`soul-it`](https://github.com/ivana-rep/soul-it), mirrors every page. Built as plain HTML + `.txt` content files, no build step, no framework, no database. Live at:
 
 **https://ivana-rep.github.io/soul/**
 
@@ -24,7 +24,7 @@ This means **adding new content is just adding a new `.txt` file** (plus updatin
 
 ## Deploy
 
-`.github/workflows/pages.yml` deploys the repo to GitHub Pages on every push to `main`:
+`.github/workflows/deploy-pages.yml` deploys the repo to GitHub Pages on every push to `main`:
 
 ```
 push to main → actions/checkout → configure-pages → upload-pages-artifact → deploy-pages
@@ -42,6 +42,9 @@ all-prayers-archive.html      flat list of every prayer, newest first (drives th
 all-verses-archive.html       flat list of every verse, newest first (drives the verses "read another one" loop)
 all-commonplace-archive.html  flat list of every commonplace entry, newest first (drives its own loop)
 saints.html                   list of every saint, linking to their individual page
+topics.html                   topic index — generated at load time from archive.html's topic sections
+books-of-the-bible.html       every book with an explainer, grouped in ten canonical sections
+path-for-the-skeptical.html   a six-question path through scripture
 saints-index.txt              internal-only lookup index of saint connections (see below)
 soulfavicon.png / soulfavicon_dark.png   favicon light/dark (S, editorial style)
 apple-touch-icon.png          iOS Home icon (180×180)
@@ -49,7 +52,8 @@ apple-touch-icon.png          iOS Home icon (180×180)
 bible/          {book}_{chapter}-{verse}.txt         e.g. isaiah_60-22.txt
 prayers/        {title-slug}.txt                     e.g. you-are-all-i-need.txt
 commonplace/    {title-slug}.txt                     e.g. share-your-faith.txt
-what-is-it/     {book-slug}.txt                      short explainer per bible book, e.g. isaiah.txt
+what-is-it/     {book-slug}.txt                      explainer per bible book, e.g. isaiah.txt
+guides/         {slug}.txt                           long-form guides, e.g. how-to-read-the-bible.txt
 saints/         {name-slug}.txt                      e.g. francis-of-assisi.txt
 ```
 
@@ -73,6 +77,8 @@ Verse text, NLT, verbatim wording. [N] marks each verse number.
 ```
 An optional reflection (wrapped in `---` … `---`), an optional source line, and optional saint/related-verse cross-links can appear between the verse text and the mandatory "read another one" line.
 
+An episode or teaching of Jesus told by more than one gospel lives in **one file** under the first gospel in canonical order, with the other versions below an `→ also in` line (e.g. `matthew_8-23-27.txt` carries Mark 4:35-41 and Luke 8:22-25). Each gospel's book section in `archive.html` still lists it under its own chapter:verse.
+
 ### Prayer (`prayers/`)
 Same shape as a verse, but the first line is `topic | title`, and the loop link reads `see other prayers on the same topic`.
 
@@ -80,10 +86,10 @@ Same shape as a verse, but the first line is `topic | title`, and the loop link 
 Quotes/prompts with no scripture reference, not addressed to God, not a known saint's own words. No topic, no reflection section — just the quote (blockquote syntax) and an optional source/cross-links. Its loop verb is `see [another](...) one`, not `read`.
 
 ### Book explainer (`what-is-it/`)
-A few factual lines about a bible book (author, genre, themes). One per book cited on the site. Not part of any loop.
+Three short paragraphs on a bible book: who wrote it, when and why; how it is built, chapter by chapter; where it sits in the bigger story. Debated points (authorship, dating) are marked as such. It ends with a `if you read only a little of this book, read this` footer linking 1–3 essential passages already on the site. One per book cited on the site. Not part of any loop.
 
 ### Saint bio (`saints/`)
-Structured sections (`↳ bio`, `↳ quotes`, `↳ what resonates with me`, `↳ connections`), pulled from a separate Obsidian vault and adapted onto the site. Not part of any loop.
+Structured sections (`↳ bio`, `↳ quotes`, `↳ what resonates with me`, `↳ connections`): researched facts and verified quotes, plus a personal "what resonates with me" section. Not part of any loop.
 
 ## The "read/see another one" loop
 
@@ -99,9 +105,9 @@ The loop order for each type is tracked by its flat "all" page (`all-verses-arch
 `archive.html` is the single hub page for all verses and prayers. It has two anchor-based indexes at the top:
 
 - **`↳ author / book`** — jumps to a section per bible book (verses only, grouped and ordered biblically)
-- **`↳ topic`** — jumps to a section per topic, shared between verses and prayers (a topic can hold verses only, prayers only, or both, split into `– verses` / `– prayers` sub-sections)
+- **`↳ topic`** — links to `topics.html`, an alphabetical index of every topic section, shared between verses and prayers (a topic can hold verses only, prayers only, or both, split into `// verses` / `// prayers` sub-sections)
 
-Every verse and prayer is assigned exactly one topic. Commonplace entries opt out of this system entirely — their only presence on `archive.html` is the `↳ all commonplace` link to their flat list.
+Topics come from the topical index of the Life Application Study Bible whenever it covers the passage, so a longer passage can sit under several topics; otherwise an existing topic is picked by hand. Commonplace entries opt out of this system entirely — their only presence on `archive.html` is the `↳ all commonplace` link to their flat list.
 
 ## Saints & cross-linking
 
