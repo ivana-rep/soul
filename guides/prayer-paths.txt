@@ -9,6 +9,7 @@ guide | prayer paths
     ↳ [midday (rest days)](post.html?p=prayers/midday-prayer-rest-days.txt)
     ↳ [evening prayer](post.html?p=prayers/evening-prayer.txt)
 → if you want to fast
+    ↳ [what fasting is and why it helps](post.html?p=guides/fasting.txt)
     ↳ [as i begin this fast](post.html?p=prayers/as-i-begin-this-fast.txt)
     ↳ [when the hunger comes](post.html?p=prayers/when-the-hunger-comes.txt)
     ↳ [breaking the fast](post.html?p=prayers/breaking-the-fast.txt)
