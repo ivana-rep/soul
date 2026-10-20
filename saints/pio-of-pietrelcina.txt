@@ -54,7 +54,7 @@ mid-1960s | Pope Paul VI dismisses all remaining accusations, closing five decad
 
 ↳ connections
 ↳ verse: [Psalms 42:5-6](post.html?p=bible/psalms_42-5-6.txt) — i will put my hope in God
-↳ verse: [2 Corinthians 12:9-10](post.html?p=bible/2-corinthians_12-9-10.txt) — my power works best in weakness
+↳ verse: [2 Corinthians 12:7-10](post.html?p=bible/2-corinthians_12-7-10.txt) — my power works best in weakness *
 ↳ verse: [James 1:2-5](post.html?p=bible/james_1-2-5.txt) — let it grow
 ↳ verse: [Psalms 73:21-26](post.html?p=bible/psalms_73-21-26.txt) — the strength of my heart *
 ↳ verse: [1 Peter 2:24](post.html?p=bible/1-peter_2-24.txt) — christians should be characterized by righteousness *
@@ -70,3 +70,4 @@ mid-1960s | Pope Paul VI dismisses all remaining accusations, closing five decad
 ↳ prayer: [the most powerful prayer](post.html?p=prayers/the-most-powerful-prayer.txt)
 ↳ prayer: [thank You for carrying my burdens](post.html?p=prayers/thank-you-for-carrying-my-burdens.txt)
 ↳ commonplace: [the reason i'm still standing](post.html?p=commonplace/the-reason-im-still-standing.txt)
+↳ commonplace: [faith and medicine](post.html?p=commonplace/faith-and-medicine.txt)

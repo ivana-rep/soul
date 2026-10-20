@@ -42,3 +42,4 @@ March 7, 1274 | dies at the Cistercian abbey of Fossanova, near Terracina, trave
 
 ↳ connections
 ↳ verse: [Exodus 3:14](post.html?p=bible/exodus_3-14.txt) — I AM who I AM
+↳ commonplace: [faith and medicine](post.html?p=commonplace/faith-and-medicine.txt)
