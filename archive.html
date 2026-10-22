@@ -92,6 +92,24 @@
         }
       }
 
+      .cols {
+        column-count: 4;
+        column-gap: 4ch;
+        max-width: 110ch;
+      }
+
+      @media (max-width: 640px) {
+        .cols { column-count: 2; column-gap: 2ch; font-size: 0.9em; }
+      }
+
+      .cols .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1ch;
+        break-inside: avoid;
+        white-space: nowrap;
+      }
+
       .top-link, .top-link:visited, .top-link:hover, .top-link:active {
         color: #767676;
         font-size: 0.8em;
@@ -113,8 +131,10 @@
 <span class="counter">↳ bible version: NLT</span>
 <span class="counter">↳ unless otherwise stated, the prayers are either from the <a href="https://www.youversion.com/bible-app">bible app</a> or are personal and do not have a specific author</span>
 
-<span id="by-author"></span>↳ author / book
-<a href="#genesis">Genesis</a> // <a href="#exodus">Exodus</a> // <a href="#numbers">Numbers</a> // <a href="#deuteronomy">Deuteronomy</a> // <a href="#joshua">Joshua</a> // <a href="#1-samuel">1 Samuel</a> // <a href="#1-kings">1 Kings</a> // <a href="#1-chronicles">1 Chronicles</a> // <a href="#2-chronicles">2 Chronicles</a> // <a href="#ezra">Ezra</a> // <a href="#esther">Esther</a> // <a href="#job">Job</a> // <a href="#psalms">Psalms</a> // <a href="#proverbs">Proverbs</a> // <a href="#ecclesiastes">Ecclesiastes</a> // <a href="#isaiah">Isaiah</a> // <a href="#jeremiah">Jeremiah</a> // <a href="#lamentations">Lamentations</a> // <a href="#daniel">Daniel</a> // <a href="#joel">Joel</a> // <a href="#micah">Micah</a> // <a href="#habakkuk">Habakkuk</a> // <a href="#zephaniah">Zephaniah</a> // <a href="#zechariah">Zechariah</a> // <a href="#matthew">Matthew</a> // <a href="#mark">Mark</a> // <a href="#luke">Luke</a> // <a href="#john">John</a> // <a href="#acts">Acts</a> // <a href="#romans">Romans</a> // <a href="#1-corinthians">1 Corinthians</a> // <a href="#2-corinthians">2 Corinthians</a> // <a href="#galatians">Galatians</a> // <a href="#ephesians">Ephesians</a> // <a href="#philippians">Philippians</a> // <a href="#colossians">Colossians</a> // <a href="#1-thessalonians">1 Thessalonians</a> // <a href="#2-thessalonians">2 Thessalonians</a> // <a href="#1-timothy">1 Timothy</a> // <a href="#2-timothy">2 Timothy</a> // <a href="#titus">Titus</a> // <a href="#hebrews">Hebrews</a> // <a href="#james">James</a> // <a href="#1-peter">1 Peter</a> // <a href="#1-john">1 John</a> // <a href="#jude">Jude</a> // <a href="#revelation">Revelation</a>
+<span id="by-author"></span>↳ author / book <span class="counter">// <span id="books-status">…</span> books</span>
+</pre>
+<div id="books" class="cols"><span class="counter">// books: see below</span></div>
+<pre>
 
 <span id="by-topic"></span>↳ <a href="topics.html">topic</a>
 
@@ -1810,5 +1830,31 @@
 
 <span class="counter">// <a href="index.html#search-input">search all archives by keyword</a></span>
 </pre>
+<script>
+  (function () {
+    var box = document.getElementById("books");
+    var status = document.getElementById("books-status");
+    var lines = document.body.innerHTML.split("\n");
+    var header = /^<span id="([a-z0-9-]+)"><\/span>([^<]+)<span class="counter"> \/\/ <a href="post\.html\?p=what-is-it\//;
+    var books = [];
+
+    for (var i = 0; i < lines.length; i++) {
+      var m = header.exec(lines[i]);
+      if (!m) continue;
+      var count = 0;
+      for (var j = i + 1; j < lines.length; j++) {
+        if (lines[j].indexOf('class="top-link"') !== -1) break;
+        if (lines[j].indexOf("\u21b3 <a href=\"post.html?p=") === 0) count++;
+      }
+      books.push('<div class="row"><a href="#' + m[1] + '">' + m[2].trim() +
+        '</a><span class="counter">' + count + "</span></div>");
+    }
+
+    if (books.length) {
+      box.innerHTML = books.join("");
+      status.textContent = String(books.length);
+    }
+  })();
+</script>
   </body>
 </html>
