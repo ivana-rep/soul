@@ -102,6 +102,17 @@
         color: #999;
       }
     }
+
+    /* gospel parallels: everything from the "→ also in" line to the source/reflection/footer */
+    .parallel {
+      color: #6b6b6b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .parallel {
+        color: #999;
+      }
+    }
   </style>
 </head>
 
@@ -130,6 +141,7 @@
       const out = [];
       let markOpen = false; // tracks !! highlight state across lines
       let quoteBuf = null; // buffers consecutive blockquote lines into one box
+      let parallel = false; // inside a "→ also in" block
 
       // verse number + highlight + link processing, shared by normal and blockquote lines
       function processLine(line) {
@@ -164,6 +176,10 @@
 
       for (let line of lines) {
 
+        // gospel parallels block: starts at "→ ", ends at the first ~ / --- / > line
+        if (line.startsWith("→ ")) parallel = true;
+        else if (line.startsWith("~ ") || line === "---" || line.startsWith("> ")) parallel = false;
+
         // blockquote: \ text (consecutive lines grouped into one box)
         if (line.startsWith("\\ ")) {
           if (!quoteBuf) quoteBuf = [];
@@ -179,6 +195,16 @@
             (m, text, link) => `<a href="${link}">${text}</a>`
           );
           out.push(`<span class="counter">${src}</span>`);
+          continue;
+        }
+
+        if (parallel && line) {
+          // keep each line's markup self-contained, so a highlight spanning lines survives the wrapper
+          const opened = markOpen;
+          let html = processLine(line);
+          if (opened) html = "<mark>" + html;
+          if (markOpen) html += "</mark>";
+          out.push(`<span class="parallel">${html}</span>`);
           continue;
         }
 
